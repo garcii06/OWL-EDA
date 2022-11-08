@@ -72,6 +72,7 @@ owl_data_2022 <- owl_data_2022 %>%
                                  map_winner %in% region_NA ~ "NA")) %>% 
   ungroup()
 
+# Data fixing ----
 # For some reason the match with id 39156 is wrong in the map_name and map_round column.
 # The values for this match were updated with the overview information of the page.
 owl_data_2022 %>% 
@@ -82,9 +83,13 @@ owl_data_2022$map_name[owl_data_2022$match_id == 39156][3] <- "King's Row"
 owl_data_2022$map_round[owl_data_2022$match_id == 39156][4] <- 1
 owl_data_2022$game_number[owl_data_2022$match_id == 39156][3] <- 2
 
-owl_data_2022_scores %>% 
-  filter(match_id == 39156) %>% 
+# Also, the match with id 38981 has for Circuit royal a duplicate entry
+owl_data_2022 %>% 
+  filter(match_id == 38981) %>% 
   view()
+
+owl_data_2022$game_number[owl_data_2022$match_id == 38981][8] <- 3
+owl_data_2022$game_number[owl_data_2022$match_id == 38981][9] <- 4
 
 # Overwatch data season 2022 with scores, although these steps can be implemented
 # in owl_data_2022.
@@ -98,6 +103,14 @@ owl_data_2022_scores <- owl_data_2022 %>%
          score_loser = max(game_number) - score_winner) %>%
   ungroup()
 
+owl_data_2022_scores %>% 
+  filter(match_id == 39156) %>% 
+  view()
+
+owl_data_2022_scores %>% 
+  filter(match_id == 38981) %>% 
+  view()
+
 write_csv(owl_data_2022_scores, "owl_data_2022_scores.csv")
 
 # Distribution of the matches duration in Hours ----
@@ -110,7 +123,7 @@ owl_data_2022_scores %>%
   labs(x = "Total match time (Hours)",
        y = "Total matches",
        title = "OWL Season 2022 Match duration",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 # Box Plot distribution of rounds. ----
 owl_data_2022_scores %>%  
@@ -123,7 +136,7 @@ owl_data_2022_scores %>%
   labs(x = "Total match time (Hours)",
        y = "Total rounds per match",
        title = "OWL Season 2022 Match duration",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 # Type of maps played during the season. ----
 # The steps for this are:
@@ -144,7 +157,7 @@ owl_data_2022_scores %>%
        y = "Total times played",
        title = "OWL Season 2022",
        subtitle = "Maps played during this season",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 owl_data_2022_scores %>%
   select(match_id, game_number, match_winner, map_name, total_time_match, stage_class, map_class) %>% 
@@ -159,7 +172,7 @@ owl_data_2022_scores %>%
   labs(x = NULL,
        y = "Number of maps played",
        title = "Maps played in the season 2022",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 # Common scores ----
 # TODO: improve visualization
@@ -173,7 +186,7 @@ owl_data_2022_scores %>%
   labs(x = NULL,
        y = "Total matches",
        title = "Common scores during season 2022",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 owl_data_2022_scores %>% 
   group_by(match_id) %>% 
@@ -187,7 +200,7 @@ owl_data_2022_scores %>%
   labs(x = NULL,
        y = "Total matches",
        title = "Common scores during season 2022",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 # Total maps taken ----
 # Total score/points of winners against losers score.
@@ -216,7 +229,7 @@ owl_data_2022_scores %>%
   labs(x = NULL,
        y = "Total maps",
        title = "Maps taken by the team",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 owl_data_2022_scores %>%
   group_by(match_id, game_number) %>% 
@@ -234,7 +247,7 @@ owl_data_2022_scores %>%
   labs(x = NULL,
        y = "Total maps",
        title = "Maps taken by the team",
-       caption = "Source: https://overwatchleague.com/en-us/statslab")
+       caption = "Source: https://overwatchleague.com")
 
 # Reverse sweep ----
 # Get the first two maps and check if the they were won by the same team but the
@@ -273,6 +286,15 @@ owl_data_2022_scores %>%
   mutate(row_match = row_number()) %>% 
   ungroup() %>% 
   filter(row_match == 1, stage_class %in% "Qualifiers") %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            wins_time = total_time / total_wins)
+
+owl_data_2022_scores %>% 
+  group_by(match_id) %>% 
+  mutate(row_match = row_number()) %>% 
+  ungroup() %>% 
+  filter(row_match == 1, stage_class %in% "Qualifiers") %>% 
   group_by(team_region, match_winner) %>% 
   summarise(total_time = sum(total_time_match),
             total_wins = sum(game_number),
@@ -289,6 +311,42 @@ owl_data_2022_scores %>%
   summarise(total_wins = sum(game_number),
             win_rate = 100 * total_wins/24) %>% 
   arrange(team_region, desc(total_wins))
+
+# Win rate in Qualifiers by team
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, map_loser, team_region) %>% 
+  group_by(match_id, game_number) %>% 
+  mutate(map_id = row_number()) %>% 
+  filter(map_id == 1, stage_class %in% "Qualifiers") %>% 
+  ungroup() %>% 
+  pivot_longer(c("map_winner", "map_loser"), names_to = "result", values_to = "team") %>%
+  group_by(team) %>% 
+  mutate(total_maps_played = n()) %>% 
+  group_by(team, result) %>% 
+  summarise(team_region, total_maps_played, total_maps_win = n(),win_rate = n()/total_maps_played) %>% 
+  mutate(num_row = row_number()) %>% 
+  filter(num_row == 1, result == "map_winner") %>% 
+  ungroup() %>% 
+  select(team_region, team, win_rate, total_maps_win, total_maps_played, -result) %>% 
+  arrange(team_region, desc(win_rate))
+
+# Win rate in Qualifiers by team and map type
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, map_loser, team_region, map_class) %>% 
+  group_by(match_id, game_number) %>% 
+  mutate(map_id = row_number()) %>% 
+  filter(map_id == 1, stage_class %in% "Qualifiers") %>% 
+  ungroup() %>% 
+  pivot_longer(c("map_winner", "map_loser"), names_to = "result", values_to = "team") %>%
+  group_by(team, map_class) %>% 
+  mutate(total_maps_played = n()) %>% 
+  group_by(team, result, map_class) %>% 
+  summarise(team_region, total_maps_played, total_maps_win = n(),win_rate = n()/total_maps_played) %>% 
+  mutate(num_row = row_number()) %>% 
+  filter(num_row == 1, result == "map_winner") %>% 
+  ungroup() %>% 
+  select(team_region, team, map_class, win_rate, total_maps_win, total_maps_played,-result) %>% 
+  arrange(team_region, team, map_class, desc(win_rate))
 
 # First map result into win? ----
 # Global
@@ -316,6 +374,6 @@ owl_data_2022_scores %>%
 
 # TODO ----
 # Improve data visualizations
-# Look into the maps.
+# Look into the maps, distances, progress.
 # Comparison regular season vs. tournaments
-# Win rate by team and map
+# Comparison team vs average/team
