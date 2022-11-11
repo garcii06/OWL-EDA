@@ -92,8 +92,8 @@ owl_data_2022_scores %>%
   group_by(match_id) %>% 
   filter(row_number() == 1) %>%
   ungroup() %>% 
-  summarise(score_winner = sum(score_winner),
-            score_loser = sum(score_loser))
+  summarise(`Maps taken by winning team` = sum(score_winner),
+            `Maps taken by loser team` = sum(score_loser))
 
 # Score by map type ----
 # TODO: improve visualization
@@ -226,6 +226,20 @@ owl_data_2022_scores_wins %>%
             total_wins = sum(game_number),
             time_to_win = total_time / total_wins,
             time_to_win = as.numeric(as.duration(time_to_win), "hour"))
+
+owl_data_2022_scores_wins %>% 
+  group_by(team_region, match_winner) %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour"),
+            time_to_win = round(time_to_win, 2)) %>%
+  select(team_region, match_winner, time_to_win, total_wins) %>% 
+  arrange(team_region, match_winner, time_to_win, total_wins) %>% 
+  rename("team region" = team_region,
+         "team" = match_winner,
+         "average time to get a win" = time_to_win,
+         "total match wins" = total_wins)
 
 owl_data_2022_scores_wins %>% 
   group_by(team_region, match_winner) %>% 
