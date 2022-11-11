@@ -224,16 +224,72 @@ owl_data_2022_scores_wins %>%
   ungroup() %>% 
   summarise(total_time = sum(total_time_match),
             total_wins = sum(game_number),
-            time_to_win = total_time / total_wins)
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour"))
 
 owl_data_2022_scores_wins %>% 
   group_by(team_region, match_winner) %>% 
   summarise(total_time = sum(total_time_match),
             total_wins = sum(game_number),
-            time_to_win = total_time / total_wins) %>% 
-  arrange(team_region, time_to_win, total_wins, total_time)
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour")) %>% 
+  arrange(team_region, time_to_win, total_wins, total_time) %>% 
+  ggplot(aes(x = time_to_win,
+             y = reorder(match_winner, desc(time_to_win)))) +
+  geom_point() +
+  geom_vline(xintercept = 1.23, colour = "red") +
+  geom_text(aes(x = 1.3, y = 20,label = "League average", family = "serif"),
+            colour = "red") +
+  labs(x = "Average time of the match (hours)",
+       y = NULL,
+       title = "Average time to achive a win.",
+       caption = "Source: https://overwatchleague.com")
+
+# Correlation between the time to win a match and the wins.
+win_base <- owl_data_2022_scores_wins %>% 
+  group_by(team_region, match_winner) %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour")) %>% 
+  arrange(team_region, time_to_win, total_wins, total_time) 
+
+win_base %>% 
+  ggplot(aes(x = total_wins,y = time_to_win, colour = total_wins)) +
+  geom_point(size = 2) +
+  geom_point(data = filter(win_base, match_winner== "Seoul Dynasty"),
+             colour = "#DAA520",
+             size = 3) +
+  annotate(geom = "text", x = 17, y = 1.13, label = "Seoul Dynasty") + 
+  labs(x = "Matches wins",
+       y = "Average time of the match (hours)",
+       colour = "Number of wins",
+       title = "Correlation between wins and the time to win.",
+       caption = "Source: https://overwatchleague.com") 
+
+# Function for team
+team_win_base <- function(team_name){
+  win_base %>% 
+    ggplot(aes(x = total_wins,y = time_to_win, colour = total_wins)) +
+    geom_point(size = 2) +
+    geom_point(data = filter(win_base, match_winner== team_name),
+               colour = "#DAA520",
+               size = 3) +
+    annotate(geom = "text",
+             x = win_base$total_wins[win_base$match_winner == team_name],
+             y = win_base$time_to_win[win_base$match_winner == team_name] - 0.01,
+             label = team_name) + 
+    labs(x = "Matches wins",
+         y = "Average time of the match (hours)",
+         colour = "Number of wins",
+         title = "Correlation between wins and the time to win.",
+         caption = "Source: https://overwatchleague.com") 
+}
+
+team_win_base("Shanghai Dragons")
 
 # Win rate ----
+# Global win rate of each team.
 owl_data_2022_scores_wins %>% 
   group_by(team_region, match_winner) %>% 
   summarise(total_wins = sum(game_number),
