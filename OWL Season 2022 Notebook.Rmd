@@ -1,0 +1,128 @@
+---
+title: "Overwatch League Season 2022"
+author: "Israel Garcia C."
+date: "`r Sys.Date()`"
+output: 
+ html_document:
+  theme:
+    bootswatch: darkly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(DT)
+library(lubridate)
+library(tidyverse)
+owl_data_2022_scores <- read_rds("Data_all\\owl_data_2022_scores.rds")
+```
+
+## Overwatch League Season 2022 Analysis
+Thanks to the [official page](https://overwatchleague.com/en-us/statslab) of the league, people can search and play with the stats
+produced in each match. Although it provides an easy way to get insight, I found it difficult to use for some of the insights and
+hypothesis.  
+Also, it includes information of previous seasons, but they have a **different format** both in the tournaments and in the
+number of players, **different map** pools, between other aspects that makes the analysis of the current season with previous information
+kind of useless.  
+Some general considerations:  
+1. The last update of the official dataset was in `10/26/2022`, but the season has already finish.\
+1.1 This makes that the analysis incomplete, missing part of the information for the `Postseason` and all information of the `Playoffs`.\
+2. This version might not be as interactive as in the official page, I plan to make it a `Shiny App` later or maybe for the following season. Another option was to make it using `SQL` and `Power BI/Tableau`, but for practice I choose to make it all in R.\
+3. Graphics need a correct theme, I know but I am doing this in my free time as data analyst. I am trying to improve analysis and visualsation.
+
+### Preview
+As always, it is useful for the **user** and the developer to have a preview of the data in the analysis.  
+Although the data in the official dataset is *almost* clean, there are some data entry errors and missing useful columns.  
+Here, you can see a clean preview, first 5 entries, with additional information that I have added.
+```{r Preview, echo = FALSE, results='asis'}
+datatable(head(owl_data_2022_scores, 20), 
+          options = list(
+          columnDefs = list(list(className = 'dt-center', targets = 5)),
+          pageLength = 5,
+          lengthMenu = c(5, 10, 15, 20),
+          extensions = 'FixedColumns',
+          dom = 't',
+          scrollX = TRUE,
+          fixedColumns = TRUE))
+```
+
+
+### Match duration
+The first part is to look into the match duration, in hours, for all the matches.  
+As expected, *Tournaments* tend to have a larger duration than Qualifiers, this can be explained by factors such as when you lose in a tournament you are knockoff, and that finals matches are *first to 4* and not *first to 3*.
+```{r Distribution of the matches duration in Hours, echo=FALSE, warning = FALSE}
+owl_data_2022_scores %>% 
+  select(match_id, game_number, stage_class, total_time_match) %>% 
+  group_by(match_id) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>%
+  ggplot(aes(x = as.numeric(as.duration(total_time_match), "hour"))) +
+  geom_histogram(binwidth = 0.1) +
+  facet_grid(stage_class ~ ., scales = "free_y") + 
+  labs(x = "Total match time (Hours)",
+       y = "Total matches",
+       title = "OWL Season 2022 Match duration",
+       caption = "Source: https://overwatchleague.com")
+
+owl_data_2022_scores %>%  
+  select(match_id, game_number, match_rounds, stage_class, total_time_match) %>% 
+  group_by(match_id) %>% 
+  filter(game_number == max(game_number), match_rounds == max(match_rounds), stage_class != "Postseason") %>%
+  ggplot(aes(x = as.numeric(as.duration(total_time_match), "hour"), y = match_rounds)) +
+  geom_boxplot() +
+  coord_flip() +
+  facet_grid(stage_class ~ ., scales = "free_y") +
+  labs(x = "Total match time (Hours)",
+       y = "Total rounds per match",
+       title = "OWL Season 2022 Match duration",
+       caption = "Source: https://overwatchleague.com")
+```
+
+### Map pool
+Overwatch counts with a variety of maps, some of them are eligible during certain qualifiers or tournaments.  
+In general, the first team to win 3 maps win the match. The order of the maps according to their type is:   
+1. Control map  
+2. Escort map  
+3. Hybrid map, at this point it is *expected* that a team has won by a score of *3-0*, only in Qualifiers.  
+4. Push map  
+5. Another control map  
+In the following figure, we can see that Escort and Hybrid maps have the same number of maps played as they are not repeated in case of ties. Push has the lowest as is not as common to see a fourth map, finally Control has the most maps played because is functions as a tie breaker as it is impossible to tie in that type of map. 
+```{r Map pool, echo=FALSE, warning = FALSE}
+owl_data_2022_scores %>%
+  select(match_id, game_number, match_winner, map_name, total_time_match, stage_class, map_class) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>% 
+  ggplot(aes(x = map_class, fill = map_class)) +
+  geom_bar() +
+  coord_flip() +
+  facet_grid(stage_class ~ .) +
+  labs(x = NULL,
+       y = "Total times played",
+       title = "OWL Season 2022",
+       subtitle = "Maps played during this season",
+       caption = "Source: https://overwatchleague.com",
+       fill = "Map type") +
+  paletteer::scale_fill_paletteer_d("rtist::vangogh")
+```
+
+### Scores in Overwatch League
+As mentioned previously, Qualifiers is played in a format *first to 3*, while Tournaments is *first to 4*. 
+```{r Common scores, echo=FALSE}
+owl_data_2022_scores_common <- owl_data_2022_scores %>% 
+  select(match_id, score_winner, score_loser, stage_class) %>% 
+  group_by(match_id) %>% 
+  filter(row_number() == 1) %>%
+  mutate(score_str = str_c(score_winner, score_loser, sep = "-"))
+
+owl_data_2022_scores_common %>%
+  filter(stage_class != "Postseason") %>%
+  ggplot(aes(x = score_str, fill = score_str)) +
+  geom_bar() +
+  coord_flip() +
+  facet_wrap(. ~ stage_class, nrow = 2) +
+  labs(x = NULL,
+       y = "Total matches",
+       title = "Common scores during season 2022",
+       caption = "Source: https://overwatchleague.com",
+       fill = "Score") +
+  paletteer::scale_fill_paletteer_d("colorBlindness::paletteMartin")
+```
+
