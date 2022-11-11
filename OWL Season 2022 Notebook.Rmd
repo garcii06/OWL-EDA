@@ -126,3 +126,209 @@ owl_data_2022_scores_common %>%
   paletteer::scale_fill_paletteer_d("colorBlindness::paletteMartin")
 ```
 
+### Maps taken
+As in any sports, both teams fight to get points for the final score. In Overwatch each point is attributed by winning or losing a map. Obviously, the number of maps taken by losers will be less than the winners.
+```{r Maps taken, echo = FALSE, message=FALSE}
+owl_data_2022_scores %>%
+  select(match_id, score_winner, score_loser) %>% 
+  group_by(match_id) %>% 
+  filter(row_number() == 1) %>%
+  ungroup() %>% 
+  summarise(`Maps taken by winning team` = sum(score_winner),
+            `Maps taken by loser team` = sum(score_loser))
+
+owl_data_2022_scores_maps_taken <- owl_data_2022_scores %>% 
+  select(match_id, game_number, map_class, map_winner, match_winner, stage_class) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1)
+
+owl_data_2022_scores_maps_taken %>% 
+  group_by(map_class) %>% 
+  summarise(wins = ifelse((map_winner == match_winner), 1 , 0)) %>%
+  mutate(wins = ifelse(wins == 1,"Winner", "Loser")) %>% 
+  count(wins) %>% 
+  ggplot(aes(x = map_class, y = n)) +
+  geom_bar(aes(fill = wins), stat = "identity", position = "dodge") +
+  labs(x = NULL,
+       y = "Total maps",
+       title = "Maps taken by each team",
+       caption = "Source: https://overwatchleague.com",
+       fill = "Map taken by:") +
+  scale_fill_brewer(palette = "Set1")
+
+owl_data_2022_scores_maps_taken %>% 
+  group_by(map_class, stage_class) %>% 
+  filter(stage_class != "Postseason") %>% 
+  summarise(wins = ifelse((map_winner == match_winner), 1 , 0)) %>%
+  count(wins) %>% 
+  mutate(wins = ifelse(wins == 1,"Winner", "Loser")) %>% 
+  ggplot(aes(x = map_class, y = n)) +
+  geom_bar(aes(fill = wins), stat = "identity", position = "dodge") +
+  coord_flip() + 
+  facet_wrap(. ~ stage_class, nrow = 2) +
+  labs(x = NULL,
+       y = "Total maps",
+       title = "Maps taken by the team",
+       caption = "Source: https://overwatchleague.com",
+       fill = "Map taken by:") +
+  scale_fill_brewer(palette = "Set1")
+```
+
+### Reverse sweep
+One of the most entertain/frustrating moments in any sports are the reverse sweep.\
+In Overwatch a reverse sweep happens when a team won the first 2 maps, but lose the following 3 maps in a row.\
+```{r reversed sweep, echo=FALSE}
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>%
+  group_by(match_id) %>% 
+  filter(game_number <= 2) %>%
+  mutate(winner_second_map = lag(map_winner)) %>% 
+  filter(game_number == 2) %>% 
+  mutate(reversed_possible = ifelse(map_winner == winner_second_map, 1, 0),
+         reversed = ifelse(reversed_possible == 1 & match_winner != map_winner,
+                           "Reversed", "No")) %>% 
+  ungroup() %>% 
+  count(reversed)
+```
+
+From the numbers, it seems that a reverse sweep is quite infrequent, just `18 matches` in total for season 2022.\
+Now, is time to know the following:\
+
+#### Which teams have reversed their matches?
+```{r achieve the reversed sweep, echo=FALSE}
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>%
+  group_by(match_id) %>% 
+  filter(game_number <= 2) %>%
+  mutate(winner_second_map = lag(map_winner)) %>% 
+  filter(game_number == 2) %>% 
+  mutate(reversed_possible = ifelse(map_winner == winner_second_map, 1, 0),
+         reversed = ifelse(reversed_possible == 1 & match_winner != map_winner,
+                           "Reversed", "No")) %>% 
+  ungroup() %>% 
+  filter(reversed == "Reversed") %>% 
+  group_by(match_winner) %>% 
+  count() %>%
+  ggplot(aes(x = n, y = reorder(match_winner, n))) +
+  geom_point(size = 2) +
+  labs(y = NULL,
+       x = "Number of matches",
+       title = "Who accomplished the reverse sweep?",
+       caption = "Source: https://overwatchleague.com") +
+  scale_x_continuous(labels = c(1:4),
+                     breaks = c(1:4),
+                     minor_breaks = NULL)
+```
+
+#### Who got reversed sweep?
+```{r got the reversed sweep, echo=FALSE}
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>%
+  group_by(match_id) %>% 
+  filter(game_number <= 2) %>%
+  mutate(winner_second_map = lag(map_winner)) %>% 
+  filter(game_number == 2) %>% 
+  mutate(reversed_possible = ifelse(map_winner == winner_second_map, 1, 0),
+         reversed = ifelse(reversed_possible == 1 & match_winner != map_winner,
+                           "Reversed", "No")) %>% 
+  ungroup() %>% 
+  filter(reversed == "Reversed") %>% 
+  group_by(map_winner) %>% 
+  count() %>%
+  ggplot(aes(x = n, y = reorder(map_winner, n))) +
+  geom_point(size = 2) +
+  labs(y = NULL,
+       x = "Number of matches",
+       title = "Who got reverse sweep?",
+       caption = "Source: https://overwatchleague.com") +
+  scale_x_continuous(labels = c(1:3),
+                     breaks = c(1:3),
+                     minor_breaks = NULL)
+```
+
+### Time to win
+The average time to win and the number of matches can be helpful to know things like:\
+- *How constant is a team at wining*.\
+- The *time window* that a particular team has to win, longer times might impact certain teams.\
+- The play style of teams, like *aggro, stall or control*.\
+```{r time to win, echo=FALSE, message=FALSE}
+owl_data_2022_scores_wins <- owl_data_2022_scores %>% 
+  select(match_id, game_number, stage_class, map_winner, map_loser, team_region,
+         team_home, total_time_match, match_winner) %>% 
+  group_by(match_id) %>% 
+  filter(row_number() == 1, stage_class %in% "Qualifiers")
+
+owl_data_2022_scores_wins_table <- owl_data_2022_scores_wins %>% 
+  group_by(team_region, match_winner) %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour"),
+            time_to_win = round(time_to_win, 2)) %>%
+  select(team_region, match_winner, time_to_win, total_wins) %>% 
+  arrange(team_region, match_winner, time_to_win, total_wins) %>% 
+  rename("team region" = team_region,
+         "team" = match_winner,
+         "average time to get a win" = time_to_win,
+         "total match wins" = total_wins)
+
+datatable(owl_data_2022_scores_wins_table, 
+          options = list(
+          pageLength = 5))
+
+owl_data_2022_scores_wins %>% 
+  group_by(team_region, match_winner) %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour")) %>% 
+  arrange(team_region, time_to_win, total_wins, total_time) %>% 
+  ggplot(aes(x = time_to_win,
+             y = reorder(match_winner, desc(time_to_win)))) +
+  geom_point() +
+  geom_vline(xintercept = 1.23, colour = "red") +
+  geom_text(aes(x = 1.3, y = 20,label = "League average", family = "serif"),
+            colour = "red") +
+  labs(x = "Average time of the match (hours)",
+       y = NULL,
+       title = "Average time to achive a win.",
+       caption = "Source: https://overwatchleague.com")
+```
+
+#### Win vs Time
+Talking a little bit about of the time to get a win and the total matches won.\
+> In the future I will try to do a shiny app for interactivity, I have the function for it, but no the knowledge to make the app.
+
+```{r Correlation, echo=FALSE, message=FALSE}
+win_base <- owl_data_2022_scores_wins %>% 
+  group_by(team_region, match_winner) %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour")) %>% 
+  arrange(team_region, time_to_win, total_wins, total_time) 
+
+win_base %>% 
+  ggplot(aes(x = total_wins,y = time_to_win, colour = total_wins)) +
+  geom_point(size = 2) +
+  geom_point(data = filter(win_base, match_winner== "Seoul Dynasty"),
+             colour = "#DAA520",
+             size = 3) +
+  annotate(geom = "text", x = 17, y = 1.13, label = "Seoul Dynasty") + 
+  labs(x = "Matches wins",
+       y = "Average time of the match (hours)",
+       colour = "Number of wins",
+       title = "Correlation between wins and the time to win.",
+       caption = "Source: https://overwatchleague.com") 
+```
+
+### What's next?
+I haven't finish the whole analysis, I need to develop the charts for some topics that I already have like: `global win rate`, `map winrate by team`, `First map win the match`.\
+Also look into `distances, progress for the type of maps`, `individual stats` that are in other dataset, `etc`.\
+Finally, continue **improving the analysis and visualisations**, and look into the **following season**.
