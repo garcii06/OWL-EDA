@@ -6,121 +6,15 @@ library(tidyverse)
 # Importing and tidying the data ----
 # From an initial import, start and end time were wrong as they got imported  as
 # char instead of datetime.
-owl_data <- read_csv("Data_all/match_map_stats.csv",
-                     col_types = cols(
-                       round_start_time = col_datetime("%m/%d/%y %H:%M"),
-                       round_end_time = col_datetime("%m/%d/%y %H:%M")))
-
-# Spec was used to know the data type of the columns.
-spec(owl_data)
-
-owl_data %>% 
-  head(10) %>% 
-  view()
-
-# EDA ----
-# The first match of the 2022 season started on May 05.
-# Mutate/add some columns:
-# Total match duration.
-# Type of match as stage_class: (Postseason, Qualifiers, Tournament).
-# Type of map as map_class: (Control, Hybrid, Escort, Push).
-owl_data_2022 <- owl_data %>% 
-  filter(year(round_start_time) >= 2022)
-
-## Map lists ----
-# Create list for every type of map.
-map_escort <- list("Circuit royal", "Dorado", "Junkertown", "Route 66", "Watchpoint: Gibraltar")
-map_hybrid <- list("Eichenwalde", "Hollywood", "King's Row", "Midtown", "Paraíso")
-map_control <- list("Busan", "Ilios", "Lijiang Tower", "Nepal", "Oasis")
-map_push <- list("Colosseo", "Esperança", "New Queen Street")
-
-## Team Regions ----
-# East or APAC region.
-region_APAC <- list("Seoul Dynasty", "Shanghai Dragons", "Philadelphia Fusion",
-                    "Hangzhou Spark", "Guangzhou Charge", "Chengdu Hunters",
-                    "Los Angeles Valiant")
-
-# West or NA region.
-region_NA <- list("Atlanta Reign", "Boston Uprising", "Dallas Fuel", "Florida Mayhem",
-                  "Houston Outlaws", "London Spitfire", "Los Angeles Gladiators",
-                  "New York Excelsior", "Paris Eternal", "San Francisco Shock",
-                  "Toronto Defiant", "Vancouver Titans", "Washington Justice")
-
-# Get the distinct name of maps available to get categorised. 
-owl_data_2022 %>%
-  distinct(map_name) %>% 
-  arrange(map_name)
-
-owl_data_2022 %>% 
-  view()
-
-# Tidy dataset ----
-owl_data_2022 <- owl_data_2022 %>%
-  rename(team_home = team_one_name, team_away = team_two_name) %>% 
-  group_by(match_id) %>%
-  mutate(total_time_match = max(round_end_time) - min(round_start_time),
-         total_time_match = as.duration(total_time_match),
-         match_rounds = row_number(),
-         stage_class = case_when(str_detect(stage, "Postseason$") ~ "Postseason",
-                                 str_detect(stage, "Qualifiers$") ~ "Qualifiers",
-                                 str_detect(stage, "Tournament$") ~ "Tournament"),
-         map_class = case_when(map_name %in% map_escort ~ "Escort",
-                               map_name %in% map_hybrid ~ "Hybrid",
-                               map_name %in% map_control ~ "Control",
-                               map_name %in% map_push ~ "Push"),
-         team_region = case_when(map_winner %in% region_APAC ~ "APAC",
-                                 map_winner %in% region_NA ~ "NA")) %>% 
-  ungroup()
-
-## Data fixing ----
-# For some reason the match with id 39156 is wrong in the map_name and map_round column.
-# The values for this match were updated with the overview information of the page.
-owl_data_2022 %>% 
-  filter(match_id == 39156) %>% 
-  view()
-
-owl_data_2022$map_name[owl_data_2022$match_id == 39156][3] <- "King's Row"
-owl_data_2022$map_round[owl_data_2022$match_id == 39156][4] <- 1
-owl_data_2022$game_number[owl_data_2022$match_id == 39156][3] <- 2
-
-# Also, the match with id 38981 has for Circuit royal a duplicate entry
-owl_data_2022 %>% 
-  filter(match_id == 38981) %>% 
-  view()
-
-owl_data_2022$game_number[owl_data_2022$match_id == 38981][8] <- 3
-owl_data_2022$game_number[owl_data_2022$match_id == 38981][9] <- 4
-
-# Overwatch data season 2022 with scores, although these steps can be implemented
-# in owl_data_2022.
-owl_data_2022_scores <- owl_data_2022 %>%
-  group_by(match_id, game_number) %>% 
-  mutate(num_row = row_number()) %>%
-  ungroup() %>% 
-  group_by(match_id) %>% 
-  mutate(score_winner = ifelse(num_row == 1,str_count(map_winner, match_winner), 0),
-         score_winner = sum(score_winner),
-         score_loser = max(game_number) - score_winner) %>%
-  ungroup() %>% 
-  select(-num_row)
-
-owl_data_2022_scores %>% 
-  filter(match_id == 39156) %>% 
-  view()
-
-owl_data_2022_scores %>% 
-  filter(match_id == 38981) %>% 
-  view()
-
-write_csv(owl_data_2022_scores, "owl_data_2022_scores.csv")
+owl_data_2022_scores <- read_rds("Data_all\\owl_data_2022_scores.rds")
 
 # Distribution of the matches duration in Hours ----
 owl_data_2022_scores %>% 
-  select(match_id, game_number, match_rounds, stage_class, total_time_match) %>% 
+  select(match_id, game_number, stage_class, total_time_match) %>% 
   group_by(match_id) %>% 
   filter(row_number() == 1, stage_class != "Postseason") %>%
-  ggplot(aes(x = as.numeric(total_time_match, "hour"))) +
-  geom_histogram() +
+  ggplot(aes(x = as.numeric(as.duration(total_time_match), "hour"))) +
+  geom_histogram(binwidth = 0.1) +
   facet_grid(stage_class ~ ., scales = "free_y") + 
   labs(x = "Total match time (Hours)",
        y = "Total matches",
@@ -132,7 +26,7 @@ owl_data_2022_scores %>%
   select(match_id, game_number, match_rounds, stage_class, total_time_match) %>% 
   group_by(match_id) %>% 
   filter(game_number == max(game_number), match_rounds == max(match_rounds), stage_class != "Postseason") %>%
-  ggplot(aes(x = as.numeric(total_time_match, "hour"), y = match_rounds)) +
+  ggplot(aes(x = as.numeric(as.duration(total_time_match), "hour"), y = match_rounds)) +
   geom_boxplot() +
   coord_flip() +
   facet_grid(stage_class ~ ., scales = "free_y") +
@@ -146,7 +40,7 @@ owl_data_2022_scores %>%
   select(match_id, game_number, match_winner, map_name, total_time_match, stage_class, map_class) %>% 
   group_by(match_id, game_number) %>% 
   filter(row_number() == 1, stage_class != "Postseason") %>% 
-  ggplot(aes(x = map_class)) +
+  ggplot(aes(x = map_class, fill = map_class)) +
   geom_bar() +
   coord_flip() +
   facet_grid(stage_class ~ .) +
@@ -154,7 +48,9 @@ owl_data_2022_scores %>%
        y = "Total times played",
        title = "OWL Season 2022",
        subtitle = "Maps played during this season",
-       caption = "Source: https://overwatchleague.com")
+       caption = "Source: https://overwatchleague.com",
+       fill = "Map type") +
+  paletteer::scale_fill_paletteer_d("rtist::vangogh")
 
 # Common scores ----
 # TODO: improve visualization
@@ -165,23 +61,27 @@ owl_data_2022_scores_common <- owl_data_2022_scores %>%
   mutate(score_str = str_c(score_winner, score_loser, sep = "-"))
 
 owl_data_2022_scores_common %>%
-  ggplot(aes(x = score_str)) +
+  ggplot(aes(x = score_str, fill = score_str)) +
   geom_bar() +
   labs(x = NULL,
        y = "Total matches",
        title = "Common scores during all season 2022",
-       caption = "Source: https://overwatchleague.com")
+       caption = "Source: https://overwatchleague.com",
+       fill = "Score") +
+  paletteer::scale_fill_paletteer_d("colorBlindness::paletteMartin")
 
 owl_data_2022_scores_common %>%
   filter(stage_class != "Postseason") %>%
-  ggplot(aes(x = score_str)) +
+  ggplot(aes(x = score_str, fill = score_str)) +
   geom_bar() +
   coord_flip() +
   facet_wrap(. ~ stage_class, nrow = 2) +
   labs(x = NULL,
        y = "Total matches",
        title = "Common scores during season 2022",
-       caption = "Source: https://overwatchleague.com")
+       caption = "Source: https://overwatchleague.com",
+       fill = "Score") +
+  paletteer::scale_fill_paletteer_d("colorBlindness::paletteMartin")
 
 # Total maps taken ----
 # Total score/points of winners against losers score.
@@ -197,7 +97,6 @@ owl_data_2022_scores %>%
 
 # Score by map type ----
 # TODO: improve visualization
-# Change legend
 owl_data_2022_scores_maps_taken <- owl_data_2022_scores %>% 
   select(match_id, game_number, map_class, map_winner, match_winner, stage_class) %>% 
   group_by(match_id, game_number) %>% 
@@ -212,8 +111,11 @@ owl_data_2022_scores_maps_taken %>%
   geom_bar(aes(fill = wins), stat = "identity", position = "dodge") +
   labs(x = NULL,
        y = "Total maps",
-       title = "Maps taken by the team",
-       caption = "Source: https://overwatchleague.com")
+       title = "Maps taken by each team",
+       caption = "Source: https://overwatchleague.com",
+       fill = "Map taken by:") +
+  scale_fill_brewer(palette = "Set1")
+
 
 owl_data_2022_scores_maps_taken %>% 
   group_by(map_class, stage_class) %>% 
@@ -228,7 +130,9 @@ owl_data_2022_scores_maps_taken %>%
   labs(x = NULL,
        y = "Total maps",
        title = "Maps taken by the team",
-       caption = "Source: https://overwatchleague.com")
+       caption = "Source: https://overwatchleague.com",
+       fill = "Map taken by:") +
+  scale_fill_brewer(palette = "Set1")
   
 # Reverse sweep ----
 # Get the first two maps and check if the they were won by the same team but the
@@ -247,6 +151,58 @@ owl_data_2022_scores %>%
   ungroup() %>% 
   count(reversed)
 
+# Which teams have reversed their matches?
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>%
+  group_by(match_id) %>% 
+  filter(game_number <= 2) %>%
+  mutate(winner_second_map = lag(map_winner)) %>% 
+  filter(game_number == 2) %>% 
+  mutate(reversed_possible = ifelse(map_winner == winner_second_map, 1, 0),
+         reversed = ifelse(reversed_possible == 1 & match_winner != map_winner,
+                           "Reversed", "No")) %>% 
+  ungroup() %>% 
+  filter(reversed == "Reversed") %>% 
+  group_by(match_winner) %>% 
+  count() %>%
+  ggplot(aes(x = n, y = reorder(match_winner, n))) +
+  geom_point(size = 2) +
+  labs(y = NULL,
+       x = "Number of matches",
+       title = "Who accomplished the reverse sweep?",
+       caption = "Source: https://overwatchleague.com") +
+  scale_x_continuous(labels = c(1:4),
+                     breaks = c(1:4),
+                     minor_breaks = NULL)
+
+# Who got reverse?
+owl_data_2022_scores %>%
+  select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
+  group_by(match_id, game_number) %>% 
+  filter(row_number() == 1, stage_class != "Postseason") %>%
+  group_by(match_id) %>% 
+  filter(game_number <= 2) %>%
+  mutate(winner_second_map = lag(map_winner)) %>% 
+  filter(game_number == 2) %>% 
+  mutate(reversed_possible = ifelse(map_winner == winner_second_map, 1, 0),
+         reversed = ifelse(reversed_possible == 1 & match_winner != map_winner,
+                           "Reversed", "No")) %>% 
+  ungroup() %>% 
+  filter(reversed == "Reversed") %>% 
+  group_by(map_winner) %>% 
+  count() %>%
+  ggplot(aes(x = n, y = reorder(map_winner, n))) +
+  geom_point(size = 2) +
+  labs(y = NULL,
+       x = "Number of matches",
+       title = "Who got reverse sweep?",
+       caption = "Source: https://overwatchleague.com") +
+  scale_x_continuous(labels = c(1:3),
+                     breaks = c(1:3),
+                     minor_breaks = NULL)
+
 # Winning/losing times by teams in Qualifiers and win rate ----
 # Each team in Qualifiers played a total of 24 games in NA region
 # Each team played 12 times as home team (except for Dallas with 11, Houston Outlaws 13)
@@ -261,6 +217,7 @@ owl_data_2022_scores_wins <- owl_data_2022_scores %>%
 owl_data_2022_scores_wins %>% 
   group_by(team_home) %>% 
   summarise(total = sum(game_number))
+
 ## Average time per win ----
 # Although some times have a higher win rate, they are not the fastest.
 owl_data_2022_scores_wins %>% 
