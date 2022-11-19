@@ -55,6 +55,7 @@ region_NA <- c("Atlanta Reign", "Boston Uprising", "Dallas Fuel", "Florida Mayhe
                   "Houston Outlaws", "London Spitfire", "Los Angeles Gladiators",
                   "New York Excelsior", "Paris Eternal", "San Francisco Shock",
                   "Toronto Defiant", "Vancouver Titans", "Washington Justice")
+
 # Tidy dataset ----
 # Now, it is time to arrange and enrich the original data.
 owl_data_2022 <- owl_data_2022 %>%
@@ -120,9 +121,37 @@ owl_data_2022_scores %>%
 
 owl_data_2022_scores %>% view()
 
+# Team images for charts. ----
+owl_images <- tribble(
+  ~team_name, ~ team_image,
+  #------------------------, #--------------------------------------------------
+  "Atlanta Reign",          "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/atlanta-reign-logo-v2_90x.png?v=1649285788",
+  "Boston Uprising",        "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/boston-uprising-logo-v2_90x.png?v=1649285788",
+  "Chengdu Hunters",        "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/chengou-hunters-logo-v2_90x.png?v=1649285788",
+  "Dallas Fuel",            "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/dallas-fuel-logo-v2_90x.png?v=1649285788",
+  "Florida Mayhem",         "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/florida-mayhem-logo-v2_90x.png?v=1649285788",
+  "Guangzhou Charge",       "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/guangzhou-charge-logo-v2.png?v=1648776838",
+  "Hangzhou Spark",         "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/hangzhou-spark-logo-v2.png",
+  "Houston Outlaws",        "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/houston-outlaws-logo-v2.png",
+  "London Spitfire",        "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/london-spitfire-logo-v2.png",
+  "Los Angeles Gladiators", "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/los-angeles-gladiators-logo-v2.png",
+  "Los Angeles Valiant",    "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/los-angeles-valiant-logo-v2.png",
+  "New York Excelsior",     "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/new-york-excelsior-logo-v2.png", 
+  "Paris Eternal",          "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/paris-eternal-logo-v2.png",
+  "Philadelphia Fusion",    "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/philadelphia-fusion-logo-v2.png", 
+  "San Francisco Shock",    "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/san-francisco-shock-logo-v2.png",
+  "Seoul Dynasty",          "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/seoul-dynasty-logo-v2.png",
+  "Shanghai Dragons",       "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/OWL_Dragons-Red_Icon_6f58c539-7af5-4180-b8c3-51ba3747105c.png",
+  "Toronto Defiant",        "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/OWL_Toronto-Defiant-2_Icon_f5b5d0fd-9068-40b5-9d1d-b4f546336aab.png",
+  "Vancouver Titans",       "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/vancouver-titans-logo-v2.png",
+  "Washington Justice",     "https://cdn.shopify.com/s/files/1/0602/7650/6866/files/washington-justice-logo-v2.png"
+)
+
+
 # File writing ----
 # The last step is to write the data into a new file. Depending on the type of
 # analysis, we can modify the structure of the file, but it is a good way to
 # work from this existing file that has most of the things prepared to work.
 write_rds(owl_data_2022_scores, "Data_all\\owl_data_2022_scores.rds")
 write_csv(owl_data_2022_scores, "Data_all\\owl_data_2022_scores.csv")
+write_rds(owl_images, "Data_all\\owl_logos.rds")
