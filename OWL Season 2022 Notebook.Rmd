@@ -5,29 +5,29 @@ date: "`r Sys.Date()`"
 output: 
  html_document:
   theme:
-    bootswatch: darkly
+    #bootswatch: darkly
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(DT)
+library(ggimage)
 library(lubridate)
 library(tidyverse)
 owl_data_2022_scores <- read_rds("Data_all\\owl_data_2022_scores.rds")
+owl_images <- read_rds("Data_all\\owl_logos.rds")
 ```
 
 ## Overwatch League Season 2022 Analysis
 Thanks to the [official page](https://overwatchleague.com/en-us/statslab) of the league, people can search and play with the stats
-produced in each match. Although it provides an easy way to get insight, I found it difficult to use for some of the insights and
-hypothesis.  
+produced in each match. Although it provides an easy way to get insight, I found it difficult to use for specific hypothesis or topics that people might want to know.
 Also, it includes information of previous seasons, but they have a **different format** both in the tournaments and in the
-number of players, **different map** pools, between other aspects that makes the analysis of the current season with previous information
-kind of useless.  
+number of players, **different map** pools, between other aspects. That makes the analysis of the current season with previous information kind of useless.  
 Some general considerations:  
 1. The last update of the official dataset was in `10/26/2022`, but the season has already finish.\
-1.1 This makes that the analysis incomplete, missing part of the information for the `Postseason` and all information of the `Playoffs`.\
-2. This version might not be as interactive as in the official page, I plan to make it a `Shiny App` later or maybe for the following season. Another option was to make it using `SQL` and `Power BI/Tableau`, but for practice I choose to make it all in R.\
-3. Graphics need a correct theme, I know but I am doing this in my free time as data analyst. I am trying to improve analysis and visualsation.
+ - 1.1 This makes that the analysis incomplete, missing part of the information for the `Postseason` and all information of the `Playoffs`.\
+2. This version might not be as interactive as in the official page, I plan to make it a `Shiny App` later or maybe for the following season. Another option was to make it this analysis using `SQL` and `Power BI/Tableau`, but for practice I choose to make it all in R and in Markdown.\
+3. Graphics need a correct theme, I know but I am doing this in my free time as data analyst. I am trying to improve analysis and visualization. Also, I know the technical aspect of R Markdown, but I lack the ability of making pretty documents.
 
 ### Preview
 As always, it is useful for the **user** and the developer to have a preview of the data in the analysis.  
@@ -48,8 +48,10 @@ datatable(head(owl_data_2022_scores, 20),
 
 ### Match duration
 The first part is to look into the match duration, in hours, for all the matches.  
-As expected, *Tournaments* tend to have a larger duration than Qualifiers, this can be explained by factors such as when you lose in a tournament you are knockoff, and that finals matches are *first to 4* and not *first to 3*.
+As expected, *Tournaments* tend to have a larger duration than Qualifiers.
+This can be explained by factors such as when you lose in a tournament you are knockoff so teams try their best to don't get eliminated as quick as possible. Also, the final match of tournaments is play in a *first to 4* format and not *first to 3*.
 ```{r Distribution of the matches duration in Hours, echo=FALSE, warning = FALSE}
+# Distribution of the matches duration in Hours ----
 owl_data_2022_scores %>% 
   select(match_id, game_number, stage_class, total_time_match) %>% 
   group_by(match_id) %>% 
@@ -62,6 +64,7 @@ owl_data_2022_scores %>%
        title = "OWL Season 2022 Match duration",
        caption = "Source: https://overwatchleague.com")
 
+# Box Plot distribution of rounds. ----
 owl_data_2022_scores %>%  
   select(match_id, game_number, match_rounds, stage_class, total_time_match) %>% 
   group_by(match_id) %>% 
@@ -77,14 +80,15 @@ owl_data_2022_scores %>%
 ```
 
 ### Map pool
-Overwatch counts with a variety of maps, some of them are eligible during certain qualifiers or tournaments.  
+Overwatch counts with a variety of maps, not all of them are eligible during certain qualifiers or tournaments.  
 In general, the first team to win 3 maps win the match. The order of the maps according to their type is:   
 1. Control map  
 2. Escort map  
-3. Hybrid map, at this point it is *expected* that a team has won by a score of *3-0*, only in Qualifiers.  
+3. Hybrid map, at this point it is *expected* that a team has won by a score of *3-0*. (only in Qualifiers)  
 4. Push map  
 5. Another control map  
-In the following figure, we can see that Escort and Hybrid maps have the same number of maps played as they are not repeated in case of ties. Push has the lowest as is not as common to see a fourth map, finally Control has the most maps played because is functions as a tie breaker as it is impossible to tie in that type of map. 
+On **Qualifiers**, we have the same number of Hybrid and Escort maps as they are played only once per match. Push is the fourth map to get played if there is no winner in the first three maps, and another map of Control is played as a tie breaker.  
+On **Tournaments**, we have less teams and the final match is play in a *4-0* format.
 ```{r Map pool, echo=FALSE, warning = FALSE}
 owl_data_2022_scores %>%
   select(match_id, game_number, match_winner, map_name, total_time_match, stage_class, map_class) %>% 
@@ -92,6 +96,7 @@ owl_data_2022_scores %>%
   filter(row_number() == 1, stage_class != "Postseason") %>% 
   ggplot(aes(x = map_class, fill = map_class)) +
   geom_bar() +
+  geom_text(aes(label = ..count..), stat = "count", hjust = -0.1) +
   coord_flip() +
   facet_grid(stage_class ~ .) +
   labs(x = NULL,
@@ -104,7 +109,10 @@ owl_data_2022_scores %>%
 ```
 
 ### Scores in Overwatch League
-As mentioned previously, Qualifiers is played in a format *first to 3*, while Tournaments is *first to 4*. 
+As mentioned previously:  
+Qualifiers are play as a **first to 3** format.  
+In Qualifiers, the maximum is 3-2 as in case of tie, 2-2, the last map is Push, where it is "impossible" to draw again.  
+Tournaments Qualifiers are play as a **first to 4**.  
 ```{r Common scores, echo=FALSE}
 owl_data_2022_scores_common <- owl_data_2022_scores %>% 
   select(match_id, score_winner, score_loser, stage_class) %>% 
@@ -122,12 +130,12 @@ owl_data_2022_scores_common %>%
        y = "Total matches",
        title = "Common scores during season 2022",
        caption = "Source: https://overwatchleague.com",
-       fill = "Score") +
-  paletteer::scale_fill_paletteer_d("colorBlindness::paletteMartin")
+       fill = "Final Score") +
+  paletteer::scale_fill_paletteer_d("rtist::vangogh")
 ```
 
 ### Maps taken
-As in any sports, both teams fight to get points for the final score. In Overwatch each point is attributed by winning or losing a map. Obviously, the number of maps taken by losers will be less than the winners.
+As in any sports, both teams fight to get points to win. In Overwatch each point is attributed by winning a map. Obviously, the number of maps taken by losers will be less than the winners.
 ```{r Maps taken, echo = FALSE, message=FALSE}
 owl_data_2022_scores %>%
   select(match_id, score_winner, score_loser) %>% 
@@ -147,14 +155,15 @@ owl_data_2022_scores_maps_taken %>%
   summarise(wins = ifelse((map_winner == match_winner), 1 , 0)) %>%
   mutate(wins = ifelse(wins == 1,"Winner", "Loser")) %>% 
   count(wins) %>% 
-  ggplot(aes(x = map_class, y = n)) +
-  geom_bar(aes(fill = wins), stat = "identity", position = "dodge") +
+  ggplot(aes(x = map_class, y = n, fill = wins)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = n), vjust = -0.5, position = position_dodge(0.9)) +
   labs(x = NULL,
        y = "Total maps",
-       title = "Maps taken by each team",
+       title = "Maps taken by winner/loser match team",
        caption = "Source: https://overwatchleague.com",
-       fill = "Map taken by:") +
-  scale_fill_brewer(palette = "Set1")
+       fill = "Maps taken by:") +
+  paletteer::scale_fill_paletteer_d("rtist::vangogh")
 
 owl_data_2022_scores_maps_taken %>% 
   group_by(map_class, stage_class) %>% 
@@ -171,12 +180,12 @@ owl_data_2022_scores_maps_taken %>%
        title = "Maps taken by the team",
        caption = "Source: https://overwatchleague.com",
        fill = "Map taken by:") +
-  scale_fill_brewer(palette = "Set1")
+  paletteer::scale_fill_paletteer_d("rtist::vangogh")
 ```
 
 ### Reverse sweep
-One of the most entertain/frustrating moments in any sports are the reverse sweep.\
-In Overwatch a reverse sweep happens when a team won the first 2 maps, but lose the following 3 maps in a row.\
+One of the most entertaining/frustrating moments in any sports are the reverse sweeps.\
+In Overwatch a reverse sweep happens when a team win all consecutive maps except for their match point map lose the following maps in a row getting a defeat.  
 ```{r reversed sweep, echo=FALSE}
 owl_data_2022_scores %>%
   select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
@@ -194,11 +203,11 @@ owl_data_2022_scores %>%
 ```
 
 From the numbers, it seems that a reverse sweep is quite infrequent, just `18 matches` in total for season 2022.\
-Now, is time to know the following:\
 
 #### Which teams have reversed their matches?
+Now, it is time to know which teams accomplish a reverse sweep in this season and against who.  
 ```{r achieve the reversed sweep, echo=FALSE}
-owl_data_2022_scores %>%
+owl_reversed <- owl_data_2022_scores %>%
   select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
   group_by(match_id, game_number) %>% 
   filter(row_number() == 1, stage_class != "Postseason") %>%
@@ -211,48 +220,46 @@ owl_data_2022_scores %>%
                            "Reversed", "No")) %>% 
   ungroup() %>% 
   filter(reversed == "Reversed") %>% 
+  select(-reversed_possible, -reversed, -stage_class, -game_number, -map_winner, -match_id) %>% 
+  rename("match_loser" = winner_second_map)
+
+owl_reversed %>% 
   group_by(match_winner) %>% 
   count() %>%
+  left_join(owl_images, c("match_winner" = "team_name")) %>% 
   ggplot(aes(x = n, y = reorder(match_winner, n))) +
-  geom_point(size = 2) +
+  geom_image(aes(image = team_image), size = 0.05) +
   labs(y = NULL,
-       x = "Number of matches",
-       title = "Who accomplished the reverse sweep?",
+       x = "Number of reverse sweep accomplished",
+       title = "Who accomplished a reverse sweep?",
        caption = "Source: https://overwatchleague.com") +
-  scale_x_continuous(labels = c(1:4),
-                     breaks = c(1:4),
-                     minor_breaks = NULL)
+  scale_x_continuous(labels = c(0:4),
+                     breaks = c(0:4),
+                     expand = expansion(add = 1))
 ```
 
 #### Who got reversed sweep?
 ```{r got the reversed sweep, echo=FALSE}
-owl_data_2022_scores %>%
-  select(match_id, game_number, stage_class, map_winner, match_winner) %>% 
-  group_by(match_id, game_number) %>% 
-  filter(row_number() == 1, stage_class != "Postseason") %>%
-  group_by(match_id) %>% 
-  filter(game_number <= 2) %>%
-  mutate(winner_second_map = lag(map_winner)) %>% 
-  filter(game_number == 2) %>% 
-  mutate(reversed_possible = ifelse(map_winner == winner_second_map, 1, 0),
-         reversed = ifelse(reversed_possible == 1 & match_winner != map_winner,
-                           "Reversed", "No")) %>% 
-  ungroup() %>% 
-  filter(reversed == "Reversed") %>% 
-  group_by(map_winner) %>% 
-  count() %>%
-  ggplot(aes(x = n, y = reorder(map_winner, n))) +
-  geom_point(size = 2) +
-  labs(y = NULL,
-       x = "Number of matches",
-       title = "Who got reverse sweep?",
+owl_reversed %>% 
+  group_by(match_winner) %>% 
+  mutate(num_reverse = n()) %>% 
+  group_by(match_winner, match_loser) %>%
+  mutate(num_match = row_number(),
+         num_match = max(num_match)) %>% 
+  left_join(owl_images, c("match_loser" = "team_name")) %>% 
+  ggplot(aes(x = match_loser, y = reorder(match_winner, num_reverse))) +
+  geom_image(aes(image = team_image), size = 0.05) +
+  geom_text(aes(label = num_match), nudge_x = 0.5) +
+  labs(y = "Winner team",
+       x = "Number of reverse sweep accomplished",
+       title = "Who accomplished a reverse sweep?",
+       subtitle = "Against who? How many times?",
        caption = "Source: https://overwatchleague.com") +
-  scale_x_continuous(labels = c(1:3),
-                     breaks = c(1:3),
-                     minor_breaks = NULL)
+  scale_x_discrete(labels = NULL)
 ```
 
-### Time to win
+### Time to win TODO
+
 The average time to win and the number of matches can be helpful to know things like:\
 - *How constant is a team at wining*.\
 - The *time window* that a particular team has to win, longer times might impact certain teams.\
@@ -264,23 +271,12 @@ owl_data_2022_scores_wins <- owl_data_2022_scores %>%
   group_by(match_id) %>% 
   filter(row_number() == 1, stage_class %in% "Qualifiers")
 
-owl_data_2022_scores_wins_table <- owl_data_2022_scores_wins %>% 
-  group_by(team_region, match_winner) %>% 
+owl_data_2022_scores_wins %>% 
+  ungroup() %>% 
   summarise(total_time = sum(total_time_match),
             total_wins = sum(game_number),
             time_to_win = total_time / total_wins,
-            time_to_win = as.numeric(as.duration(time_to_win), "hour"),
-            time_to_win = round(time_to_win, 2)) %>%
-  select(team_region, match_winner, time_to_win, total_wins) %>% 
-  arrange(team_region, match_winner, time_to_win, total_wins) %>% 
-  rename("team region" = team_region,
-         "team" = match_winner,
-         "average time to get a win" = time_to_win,
-         "total match wins" = total_wins)
-
-datatable(owl_data_2022_scores_wins_table, 
-          options = list(
-          pageLength = 5))
+            time_to_win = as.numeric(as.duration(time_to_win), "hour"))
 
 owl_data_2022_scores_wins %>% 
   group_by(team_region, match_winner) %>% 
@@ -289,16 +285,19 @@ owl_data_2022_scores_wins %>%
             time_to_win = total_time / total_wins,
             time_to_win = as.numeric(as.duration(time_to_win), "hour")) %>% 
   arrange(team_region, time_to_win, total_wins, total_time) %>% 
+  left_join(owl_images, c("match_winner" = "team_name")) %>% 
   ggplot(aes(x = time_to_win,
              y = reorder(match_winner, desc(time_to_win)))) +
-  geom_point() +
+  geom_image(aes(image = team_image)) +
   geom_vline(xintercept = 1.23, colour = "red") +
   geom_text(aes(x = 1.3, y = 20,label = "League average", family = "serif"),
             colour = "red") +
   labs(x = "Average time of the match (hours)",
        y = NULL,
        title = "Average time to achive a win.",
-       caption = "Source: https://overwatchleague.com")
+       caption = "Source: https://overwatchleague.com") +
+  scale_x_continuous(expand = expansion(0.5))
+
 ```
 
 #### Win vs Time
@@ -315,12 +314,9 @@ win_base <- owl_data_2022_scores_wins %>%
   arrange(team_region, time_to_win, total_wins, total_time) 
 
 win_base %>% 
-  ggplot(aes(x = total_wins,y = time_to_win, colour = total_wins)) +
-  geom_point(size = 2) +
-  geom_point(data = filter(win_base, match_winner== "Seoul Dynasty"),
-             colour = "#DAA520",
-             size = 3) +
-  annotate(geom = "text", x = 17, y = 1.13, label = "Seoul Dynasty") + 
+  left_join(owl_images, c("match_winner" = "team_name")) %>% 
+  ggplot(aes(x = total_wins,y = time_to_win)) +
+  geom_image(aes(image = team_image)) +
   labs(x = "Matches wins",
        y = "Average time of the match (hours)",
        colour = "Number of wins",
