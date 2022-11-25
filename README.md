@@ -10,3 +10,7 @@ The EDA is focused in the map dataset `match_map_stats` and I will try to get in
 * Common scores 💯
 * Reversed sweeps 🔀
 * and more.
+
+## Tableau
+Hey, the Tableau visualization for the project is [here](https://public.tableau.com/views/OverwatchLeagueSeason2022/FirstMapWinWinstheMatch?:language=en-US&:display_count=n&:origin=viz_share_link).  
+Visualizations are also in `R` but Tableau might be a better way to get a quick view without running a script.
