@@ -1,0 +1,21 @@
+team_region,team,win_rate,total_maps_win,total_maps_played
+APAC region,Seoul Dynasty,0.7209302325581395,62,86
+APAC region,Shanghai Dragons,0.6551724137931034,57,87
+APAC region,Philadelphia Fusion,0.5,50,100
+APAC region,Hangzhou Spark,0.4842105263157895,46,95
+APAC region,Chengdu Hunters,0.42857142857142855,39,91
+APAC region,Guangzhou Charge,0.37777777777777777,34,90
+APAC region,Los Angeles Valiant,0.36363636363636365,36,99
+NA region,San Francisco Shock,0.7065217391304348,65,92
+NA region,Dallas Fuel,0.7011494252873564,61,87
+NA region,Los Angeles Gladiators,0.6881720430107527,64,93
+NA region,Houston Outlaws,0.5714285714285714,56,98
+NA region,London Spitfire,0.5494505494505495,50,91
+NA region,Atlanta Reign,0.5483870967741935,51,93
+NA region,Florida Mayhem,0.5054945054945055,46,91
+NA region,Toronto Defiant,0.4948453608247423,48,97
+NA region,Washington Justice,0.47959183673469385,47,98
+NA region,Boston Uprising,0.45263157894736844,43,95
+NA region,Vancouver Titans,0.31868131868131866,29,91
+NA region,New York Excelsior,0.2978723404255319,28,94
+NA region,Paris Eternal,0.1744186046511628,15,86
