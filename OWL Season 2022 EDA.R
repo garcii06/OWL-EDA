@@ -38,10 +38,12 @@ owl_data_2022_scores %>%
        caption = "Source: https://overwatchleague.com")
 
 ## Type of maps played during the season. ----
-owl_data_2022_scores %>%
+owl_maps_base <- owl_data_2022_scores %>%
   select(match_id, game_number, match_winner, map_name, total_time_match, stage_class, map_class) %>% 
   group_by(match_id, game_number) %>% 
-  filter(row_number() == 1, stage_class != "Postseason") %>% 
+  filter(row_number() == 1, stage_class != "Postseason")
+
+owl_maps_base %>%
   ggplot(aes(x = map_class, fill = map_class)) +
   geom_bar() +
   geom_text(aes(label = ..count..), stat = "count", hjust = -0.1) +
@@ -55,6 +57,7 @@ owl_data_2022_scores %>%
        fill = "Map type") +
   paletteer::scale_fill_paletteer_d("rtist::vangogh")
 
+write_csv(owl_maps_base, "Data_Queries//owl_maps_base.csv")
 # Common scores ----
 # Qualifiers is played as a "first to 3" game.
 # In Qualifiers, the maximum is 3-2 as in case of tie, 2-2, the last map is 
@@ -90,6 +93,7 @@ owl_data_2022_scores_common %>%
        fill = "Final Score") +
   paletteer::scale_fill_paletteer_d("rtist::vangogh")
 
+write_csv(owl_data_2022_scores_common, "Data_Queries//owl_base_scores.csv")
 # Total maps taken ----
 # Some maps have a defender and attacker round for both teams, others are king
 # of the hill format. So, each team has a opportunity to win maps.
@@ -140,7 +144,16 @@ owl_data_2022_scores_maps_taken %>%
        caption = "Source: https://overwatchleague.com",
        fill = "Map taken by:") +
   paletteer::scale_fill_paletteer_d("rtist::vangogh")
-  
+
+owl_maps_taken <- owl_data_2022_scores_maps_taken %>% 
+  group_by(map_class, stage_class) %>% 
+  filter(stage_class != "Postseason") %>% 
+  summarise(wins = ifelse((map_winner == match_winner), 1 , 0)) %>%
+  count(wins) %>% 
+  mutate(wins = ifelse(wins == 1,"Winner", "Loser"))
+
+write_csv(owl_maps_taken, "Data_Queries//owl_base_maps_taken.csv")
+
 # Reverse sweep ----
 # Get the first two maps and check if the they were won by the same team but the
 # match winner is different.
@@ -172,7 +185,7 @@ owl_reversed <- owl_data_2022_scores %>%
                            "Reversed", "No")) %>% 
   ungroup() %>% 
   filter(reversed == "Reversed") %>% 
-  select(-reversed_possible, -reversed, -stage_class, -game_number, -map_winner, -match_id) %>% 
+  select(-reversed_possible, -reversed, -game_number, -map_winner, -match_id) %>% 
   rename("match_loser" = winner_second_map)
 
 ### Who accomplished a reverse sweep? ----
@@ -190,7 +203,23 @@ owl_reversed %>%
                      breaks = c(0:4),
                      expand = expansion(add = 1))
 
+owl_reverse_try <- owl_reversed %>% 
+  group_by(match_winner) %>% 
+  count() %>%
+  left_join(owl_images, c("match_winner" = "team_name"))
+
+write_csv(owl_reverse_try, "Data_Queries//owl_base_reversed.csv")
+write_csv(owl_reversed, "Data_Queries//owl_base_reversed2.csv")
+
 ### Who accomplished a reverse sweep? Against who? How many times? ----
+owl_got_reversed <- owl_reversed %>% 
+  group_by(match_winner) %>% 
+  mutate(num_reverse = n()) %>% 
+  group_by(match_winner, match_loser) %>%
+  mutate(num_match = row_number(),
+         num_match = max(num_match)) %>% 
+  left_join(owl_images, c("match_loser" = "team_name")) 
+
 owl_reversed %>% 
   group_by(match_winner) %>% 
   mutate(num_reverse = n()) %>% 
@@ -208,37 +237,7 @@ owl_reversed %>%
        caption = "Source: https://overwatchleague.com") +
   scale_x_discrete(labels = NULL)
 
-# Commenting both, as the previous queries/charts have the same information
-# in different format.
-## Who got reverse? ----
-# owl_reversed %>% 
-#   group_by(map_winner) %>% 
-#   count() %>%
-#   left_join(owl_images, c("map_winner" = "team_name")) %>% 
-#   ggplot(aes(x = n, y = reorder(map_winner, n))) +
-#   geom_image(aes(image = team_image), size = 0.05) + 
-#   labs(y = NULL,
-#        x = "Number of matches with reverse sweep",
-#        title = "Who got reverse sweep?",
-#        caption = "Source: https://overwatchleague.com") +
-#   scale_x_continuous(labels = c(0:10),
-#                      breaks = c(0:10),
-#                      expand = expansion(add = 1))
-
-## Reversed by which team? ----
-# owl_reversed %>% 
-#   group_by(map_winner) %>% 
-#   count(match_winner) %>%
-#   left_join(owl_images, c("map_winner" = "team_name")) %>%
-#   ggplot(aes(x = n, y = reorder(map_winner, n))) +
-#   geom_image(aes(image = team_image), size = 0.05) + 
-#   labs(y = NULL,
-#        x = "Number of matches with reverse sweep",
-#        title = "Who got reverse sweep?",
-#        caption = "Source: https://overwatchleague.com") +
-#   scale_x_continuous(labels = c(0:10),
-#                      breaks = c(0:10),
-#                      expand = expansion(add = 1))
+write_csv(owl_got_reversed, "Data_Queries//owl_base_got_reversed.csv")
 
 # Winning/losing times by teams in Qualifiers and win rate ----
 # Each team in Qualifiers played a total of 24 games in NA region
@@ -316,6 +315,17 @@ owl_data_2022_scores_wins %>%
        caption = "Source: https://overwatchleague.com") +
   scale_x_continuous(expand = expansion(0.5))
 
+owl_time_win <- owl_data_2022_scores_wins %>% 
+  group_by(team_region, match_winner) %>% 
+  summarise(total_time = sum(total_time_match),
+            total_wins = sum(game_number),
+            time_to_win = total_time / total_wins,
+            time_to_win = as.numeric(as.duration(time_to_win), "hour")) %>% 
+  arrange(team_region, time_to_win, total_wins, total_time) %>% 
+  left_join(owl_images, c("match_winner" = "team_name"))
+
+write_csv(owl_time_win, "Data_Queries//owl_base_time.csv")
+
 # Correlation between the time to win a match and the wins.
 win_base <- owl_data_2022_scores_wins %>% 
   group_by(team_region, match_winner) %>% 
@@ -336,14 +346,18 @@ win_base %>%
        title = "Correlation between wins and the time to win.",
        caption = "Source: https://overwatchleague.com") 
 
+write_csv(win_base, "Data_Queries//owl_base_wins.csv")
+
 # Win rate ----
 # Global win rate of each team.
-owl_data_2022_scores_wins %>% 
+owl_global_winrate <- owl_data_2022_scores_wins %>% 
   group_by(team_region, match_winner) %>% 
   summarise(total_wins = sum(game_number),
             win_rate = 100 * total_wins/24) %>% 
   arrange(team_region, desc(total_wins))
   
+write_csv(owl_global_winrate, "Data_Queries//owl_base_winrate.csv")
+
 ## Win rate in Qualifiers by team ----
 owl_data_2022_scores_rate <- owl_data_2022_scores %>%
   select(match_id, game_number, stage_class, map_winner, map_loser, team_region, map_class) %>% 
@@ -351,7 +365,7 @@ owl_data_2022_scores_rate <- owl_data_2022_scores %>%
   filter(row_number() == 1, stage_class %in% "Qualifiers") %>% 
   pivot_longer(c("map_winner", "map_loser"), names_to = "result", values_to = "team")
 
-owl_data_2022_scores_rate %>% 
+owl_qualifiers_winrate <- owl_data_2022_scores_rate %>% 
   group_by(team) %>% 
   mutate(total_maps_played = n()) %>% 
   group_by(team, result) %>% 
@@ -360,6 +374,8 @@ owl_data_2022_scores_rate %>%
   ungroup() %>% 
   select(team_region, team, win_rate, total_maps_win, total_maps_played, -result) %>% 
   arrange(team_region, desc(win_rate))
+
+write_csv(owl_qualifiers_winrate, "Data_Queries//owl_qualifiers_winrate.csv")
 
 ## Win rate in Qualifiers by team and map type ----
 owl_data_2022_scores_rate %>%
@@ -387,11 +403,13 @@ owl_data_2022_scores_first %>%
             total_percent = total_first/total_matches)
 
 # By type of stage
-owl_data_2022_scores_first %>% 
+owl_fist_winrate <- owl_data_2022_scores_first %>% 
   group_by(stage_class) %>% 
   summarise(total_matches = sum(game_number),
             total_first = sum(first_map),
             total_percent = total_first/total_matches)
+
+write_csv(owl_fist_winrate, "Data_Queries//owl_base_first_win.csv")
 
 # Look to the wins each week. ----
 owl_data_2022_scores %>% 
