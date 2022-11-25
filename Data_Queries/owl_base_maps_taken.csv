@@ -1,0 +1,17 @@
+map_class,stage_class,wins,n
+Control,Qualifiers,Loser,60
+Control,Qualifiers,Winner,212
+Control,Tournament,Loser,20
+Control,Tournament,Winner,57
+Escort,Qualifiers,Loser,58
+Escort,Qualifiers,Winner,182
+Escort,Tournament,Loser,14
+Escort,Tournament,Winner,50
+Hybrid,Qualifiers,Loser,50
+Hybrid,Qualifiers,Winner,190
+Hybrid,Tournament,Loser,18
+Hybrid,Tournament,Winner,42
+Push,Qualifiers,Loser,39
+Push,Qualifiers,Winner,136
+Push,Tournament,Loser,6
+Push,Tournament,Winner,39

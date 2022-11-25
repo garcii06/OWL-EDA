@@ -1,0 +1,1174 @@
+match_id,game_number,match_winner,map_name,total_time_match,stage_class,map_class
+38971,1,Los Angeles Gladiators,Lijiang Tower,5340,Qualifiers,Control
+38971,2,Los Angeles Gladiators,Midtown,5340,Qualifiers,Hybrid
+38971,3,Los Angeles Gladiators,Circuit royal,5340,Qualifiers,Escort
+38971,4,Los Angeles Gladiators,New Queen Street,5340,Qualifiers,Push
+38972,1,San Francisco Shock,Ilios,3600,Qualifiers,Control
+38972,2,San Francisco Shock,King's Row,3600,Qualifiers,Hybrid
+38972,3,San Francisco Shock,Dorado,3600,Qualifiers,Escort
+38973,1,Atlanta Reign,Lijiang Tower,4680,Qualifiers,Control
+38973,2,Atlanta Reign,Eichenwalde,4680,Qualifiers,Hybrid
+38973,3,Atlanta Reign,Watchpoint: Gibraltar,4680,Qualifiers,Escort
+38973,4,Atlanta Reign,Colosseo,4680,Qualifiers,Push
+38975,1,San Francisco Shock,Lijiang Tower,3300,Qualifiers,Control
+38975,2,San Francisco Shock,Eichenwalde,3300,Qualifiers,Hybrid
+38975,3,San Francisco Shock,Watchpoint: Gibraltar,3300,Qualifiers,Escort
+38974,1,Boston Uprising,Ilios,7440,Qualifiers,Control
+38974,2,Boston Uprising,Midtown,7440,Qualifiers,Hybrid
+38974,3,Boston Uprising,Circuit royal,7440,Qualifiers,Escort
+38974,4,Boston Uprising,Colosseo,7440,Qualifiers,Push
+38974,5,Boston Uprising,Oasis,7440,Qualifiers,Control
+38976,1,Houston Outlaws,Oasis,3600,Qualifiers,Control
+38976,2,Houston Outlaws,Midtown,3600,Qualifiers,Hybrid
+38976,3,Houston Outlaws,Dorado,3600,Qualifiers,Escort
+38977,1,Washington Justice,Ilios,4260,Qualifiers,Control
+38977,2,Washington Justice,Midtown,4260,Qualifiers,Hybrid
+38977,3,Washington Justice,Circuit royal,4260,Qualifiers,Escort
+38977,4,Washington Justice,New Queen Street,4260,Qualifiers,Push
+38978,1,Atlanta Reign,Oasis,3360,Qualifiers,Control
+38978,2,Atlanta Reign,King's Row,3360,Qualifiers,Hybrid
+38978,3,Atlanta Reign,Route 66,3360,Qualifiers,Escort
+38979,1,Los Angeles Gladiators,Ilios,4380,Qualifiers,Control
+38979,2,Los Angeles Gladiators,Eichenwalde,4380,Qualifiers,Hybrid
+38979,3,Los Angeles Gladiators,Watchpoint: Gibraltar,4380,Qualifiers,Escort
+38979,4,Los Angeles Gladiators,Colosseo,4380,Qualifiers,Push
+38980,1,London Spitfire,Oasis,3780,Qualifiers,Control
+38980,2,London Spitfire,King's Row,3780,Qualifiers,Hybrid
+38980,3,London Spitfire,Route 66,3780,Qualifiers,Escort
+38981,1,Florida Mayhem,Oasis,6660,Qualifiers,Control
+38981,2,Florida Mayhem,Midtown,6660,Qualifiers,Hybrid
+38981,3,Florida Mayhem,Circuit royal,6660,Qualifiers,Escort
+38981,4,Florida Mayhem,New Queen Street,6660,Qualifiers,Push
+38982,1,Dallas Fuel,Lijiang Tower,2880,Qualifiers,Control
+38982,2,Dallas Fuel,Eichenwalde,2880,Qualifiers,Hybrid
+38982,3,Dallas Fuel,Route 66,2880,Qualifiers,Escort
+38983,1,Toronto Defiant,Lijiang Tower,5400,Qualifiers,Control
+38983,2,Toronto Defiant,King's Row,5400,Qualifiers,Hybrid
+38983,3,Toronto Defiant,Watchpoint: Gibraltar,5400,Qualifiers,Escort
+38983,4,Toronto Defiant,New Queen Street,5400,Qualifiers,Push
+38983,5,Toronto Defiant,Ilios,5400,Qualifiers,Control
+38984,1,Florida Mayhem,Colosseo,3000,Qualifiers,Push
+38984,2,Florida Mayhem,Dorado,3000,Qualifiers,Escort
+38984,3,Florida Mayhem,King's Row,3000,Qualifiers,Hybrid
+38985,1,San Francisco Shock,New Queen Street,4560,Qualifiers,Push
+38985,2,San Francisco Shock,Circuit royal,4560,Qualifiers,Escort
+38985,3,San Francisco Shock,Midtown,4560,Qualifiers,Hybrid
+38985,4,San Francisco Shock,Ilios,4560,Qualifiers,Control
+38986,1,Washington Justice,Colosseo,3300,Qualifiers,Push
+38986,2,Washington Justice,Dorado,3300,Qualifiers,Escort
+38986,3,Washington Justice,Eichenwalde,3300,Qualifiers,Hybrid
+38987,1,London Spitfire,Colosseo,5220,Qualifiers,Push
+38987,2,London Spitfire,Route 66,5220,Qualifiers,Escort
+38987,3,London Spitfire,Midtown,5220,Qualifiers,Hybrid
+38987,4,London Spitfire,Lijiang Tower,5220,Qualifiers,Control
+38988,1,Dallas Fuel,Colosseo,5580,Qualifiers,Push
+38988,2,Dallas Fuel,Watchpoint: Gibraltar,5580,Qualifiers,Escort
+38988,3,Dallas Fuel,Eichenwalde,5580,Qualifiers,Hybrid
+38988,4,Dallas Fuel,Ilios,5580,Qualifiers,Control
+38988,5,Dallas Fuel,New Queen Street,5580,Qualifiers,Push
+38989,1,New York Excelsior,New Queen Street,4140,Qualifiers,Push
+38989,2,New York Excelsior,Watchpoint: Gibraltar,4140,Qualifiers,Escort
+38989,3,New York Excelsior,Eichenwalde,4140,Qualifiers,Hybrid
+38989,4,New York Excelsior,Lijiang Tower,4140,Qualifiers,Control
+38990,1,Houston Outlaws,Colosseo,5340,Qualifiers,Push
+38990,2,Houston Outlaws,Route 66,5340,Qualifiers,Escort
+38990,3,Houston Outlaws,King's Row,5340,Qualifiers,Hybrid
+38990,4,Houston Outlaws,Lijiang Tower,5340,Qualifiers,Control
+38990,5,Houston Outlaws,New Queen Street,5340,Qualifiers,Push
+38991,1,San Francisco Shock,New Queen Street,4560,Qualifiers,Push
+38991,2,San Francisco Shock,Dorado,4560,Qualifiers,Escort
+38991,3,San Francisco Shock,King's Row,4560,Qualifiers,Hybrid
+38991,4,San Francisco Shock,Oasis,4560,Qualifiers,Control
+38992,1,Toronto Defiant,New Queen Street,3000,Qualifiers,Push
+38992,2,Toronto Defiant,Route 66,3000,Qualifiers,Escort
+38992,3,Toronto Defiant,Eichenwalde,3000,Qualifiers,Hybrid
+39011,1,Philadelphia Fusion,New Queen Street,3780,Qualifiers,Push
+39011,2,Philadelphia Fusion,Circuit royal,3780,Qualifiers,Escort
+39011,3,Philadelphia Fusion,King's Row,3780,Qualifiers,Hybrid
+39016,1,Guangzhou Charge,Colosseo,4320,Qualifiers,Push
+39016,2,Guangzhou Charge,Route 66,4320,Qualifiers,Escort
+39016,3,Guangzhou Charge,Eichenwalde,4320,Qualifiers,Hybrid
+39016,4,Guangzhou Charge,Ilios,4320,Qualifiers,Control
+39017,1,Hangzhou Spark,New Queen Street,4320,Qualifiers,Push
+39017,2,Hangzhou Spark,Dorado,4320,Qualifiers,Escort
+39017,3,Hangzhou Spark,Midtown,4320,Qualifiers,Hybrid
+39017,4,Hangzhou Spark,Ilios,4320,Qualifiers,Control
+38993,1,Washington Justice,Lijiang Tower,4980,Qualifiers,Control
+38993,2,Washington Justice,King's Row,4980,Qualifiers,Hybrid
+38993,3,Washington Justice,Watchpoint: Gibraltar,4980,Qualifiers,Escort
+38993,4,Washington Justice,Colosseo,4980,Qualifiers,Push
+38994,1,Florida Mayhem,Ilios,5100,Qualifiers,Control
+38994,2,Florida Mayhem,Eichenwalde,5100,Qualifiers,Hybrid
+38994,3,Florida Mayhem,Dorado,5100,Qualifiers,Escort
+38995,1,Dallas Fuel,Oasis,3060,Qualifiers,Control
+38995,2,Dallas Fuel,King's Row,3060,Qualifiers,Hybrid
+38995,3,Dallas Fuel,Circuit royal,3060,Qualifiers,Escort
+39012,1,Chengdu Hunters,Colosseo,3060,Qualifiers,Push
+39012,2,Chengdu Hunters,Dorado,3060,Qualifiers,Escort
+39012,3,Chengdu Hunters,King's Row,3060,Qualifiers,Hybrid
+39027,1,Shanghai Dragons,Colosseo,6120,Qualifiers,Push
+39027,2,Shanghai Dragons,Watchpoint: Gibraltar,6120,Qualifiers,Escort
+39027,3,Shanghai Dragons,Eichenwalde,6120,Qualifiers,Hybrid
+39027,4,Shanghai Dragons,Lijiang Tower,6120,Qualifiers,Control
+39027,5,Shanghai Dragons,New Queen Street,6120,Qualifiers,Push
+39025,1,Seoul Dynasty,Colosseo,5100,Qualifiers,Push
+39025,2,Seoul Dynasty,Circuit royal,5100,Qualifiers,Escort
+39025,3,Seoul Dynasty,King's Row,5100,Qualifiers,Hybrid
+39025,4,Seoul Dynasty,Lijiang Tower,5100,Qualifiers,Control
+39025,5,Seoul Dynasty,New Queen Street,5100,Qualifiers,Push
+38996,1,Houston Outlaws,Ilios,3600,Qualifiers,Control
+38996,2,Houston Outlaws,Eichenwalde,3600,Qualifiers,Hybrid
+38996,3,Houston Outlaws,Circuit royal,3600,Qualifiers,Escort
+38997,1,San Francisco Shock,Oasis,6060,Qualifiers,Control
+38997,2,San Francisco Shock,Midtown,6060,Qualifiers,Hybrid
+38997,3,San Francisco Shock,Route 66,6060,Qualifiers,Escort
+38997,4,San Francisco Shock,Colosseo,6060,Qualifiers,Push
+38997,5,San Francisco Shock,Lijiang Tower,6060,Qualifiers,Control
+38998,1,Toronto Defiant,Lijiang Tower,4500,Qualifiers,Control
+38998,2,Toronto Defiant,Eichenwalde,4500,Qualifiers,Hybrid
+38998,3,Toronto Defiant,Dorado,4500,Qualifiers,Escort
+38998,4,Toronto Defiant,New Queen Street,4500,Qualifiers,Push
+39029,1,Philadelphia Fusion,Oasis,3300,Qualifiers,Control
+39029,2,Philadelphia Fusion,Eichenwalde,3300,Qualifiers,Hybrid
+39029,3,Philadelphia Fusion,Watchpoint: Gibraltar,3300,Qualifiers,Escort
+39028,1,Seoul Dynasty,Ilios,3960,Qualifiers,Control
+39028,2,Seoul Dynasty,Eichenwalde,3960,Qualifiers,Hybrid
+39028,3,Seoul Dynasty,Route 66,3960,Qualifiers,Escort
+39015,1,Hangzhou Spark,Lijiang Tower,5100,Qualifiers,Control
+39015,2,Hangzhou Spark,King's Row,5100,Qualifiers,Hybrid
+39015,3,Hangzhou Spark,Dorado,5100,Qualifiers,Escort
+39015,4,Hangzhou Spark,Colosseo,5100,Qualifiers,Push
+39015,5,Hangzhou Spark,Oasis,5100,Qualifiers,Control
+38999,1,Atlanta Reign,Ilios,3480,Qualifiers,Control
+38999,2,Atlanta Reign,Midtown,3480,Qualifiers,Hybrid
+38999,3,Atlanta Reign,Route 66,3480,Qualifiers,Escort
+39000,1,Dallas Fuel,Ilios,3360,Qualifiers,Control
+39000,2,Dallas Fuel,Midtown,3360,Qualifiers,Hybrid
+39000,3,Dallas Fuel,Circuit royal,3360,Qualifiers,Escort
+39001,1,Boston Uprising,Oasis,3720,Qualifiers,Control
+39001,2,Boston Uprising,King's Row,3720,Qualifiers,Hybrid
+39001,3,Boston Uprising,Circuit royal,3720,Qualifiers,Escort
+39001,4,Boston Uprising,New Queen Street,3720,Qualifiers,Push
+39014,1,Seoul Dynasty,Lijiang Tower,3240,Qualifiers,Control
+39014,2,Seoul Dynasty,Dorado,3240,Qualifiers,Escort
+39014,3,Seoul Dynasty,Midtown,3240,Qualifiers,Hybrid
+39026,1,Hangzhou Spark,Oasis,4920,Qualifiers,Control
+39026,2,Hangzhou Spark,Watchpoint: Gibraltar,4920,Qualifiers,Escort
+39026,3,Hangzhou Spark,Eichenwalde,4920,Qualifiers,Hybrid
+39026,4,Hangzhou Spark,New Queen Street,4920,Qualifiers,Push
+39030,1,Shanghai Dragons,Ilios,6600,Qualifiers,Control
+39030,2,Shanghai Dragons,Dorado,6600,Qualifiers,Escort
+39030,3,Shanghai Dragons,Midtown,6600,Qualifiers,Hybrid
+39030,4,Shanghai Dragons,Colosseo,6600,Qualifiers,Push
+39030,5,Shanghai Dragons,Lijiang Tower,6600,Qualifiers,Control
+39022,1,Chengdu Hunters,Colosseo,4740,Qualifiers,Push
+39022,2,Chengdu Hunters,Watchpoint: Gibraltar,4740,Qualifiers,Escort
+39022,3,Chengdu Hunters,Midtown,4740,Qualifiers,Hybrid
+39022,4,Chengdu Hunters,Lijiang Tower,4740,Qualifiers,Control
+39019,1,Seoul Dynasty,Oasis,3780,Qualifiers,Control
+39019,2,Seoul Dynasty,Circuit royal,3780,Qualifiers,Escort
+39019,3,Seoul Dynasty,King's Row,3780,Qualifiers,Hybrid
+39020,1,Shanghai Dragons,Oasis,5760,Qualifiers,Control
+39020,2,Shanghai Dragons,Route 66,5760,Qualifiers,Escort
+39020,3,Shanghai Dragons,Midtown,5760,Qualifiers,Hybrid
+39020,4,Shanghai Dragons,New Queen Street,5760,Qualifiers,Push
+39020,5,Shanghai Dragons,Ilios,5760,Qualifiers,Control
+39002,1,Los Angeles Gladiators,New Queen Street,4800,Qualifiers,Push
+39002,2,Los Angeles Gladiators,Dorado,4800,Qualifiers,Escort
+39002,3,Los Angeles Gladiators,King's Row,4800,Qualifiers,Hybrid
+39002,4,Los Angeles Gladiators,Oasis,4800,Qualifiers,Control
+39003,1,Toronto Defiant,Colosseo,4680,Qualifiers,Push
+39003,2,Toronto Defiant,Watchpoint: Gibraltar,4680,Qualifiers,Escort
+39003,3,Toronto Defiant,Midtown,4680,Qualifiers,Hybrid
+39003,4,Toronto Defiant,Ilios,4680,Qualifiers,Control
+39004,1,San Francisco Shock,Colosseo,3600,Qualifiers,Push
+39004,2,San Francisco Shock,Circuit royal,3600,Qualifiers,Escort
+39004,3,San Francisco Shock,Eichenwalde,3600,Qualifiers,Hybrid
+39004,4,San Francisco Shock,Lijiang Tower,3600,Qualifiers,Control
+39021,1,Hangzhou Spark,Lijiang Tower,3540,Qualifiers,Control
+39021,2,Hangzhou Spark,Circuit royal,3540,Qualifiers,Escort
+39021,3,Hangzhou Spark,Midtown,3540,Qualifiers,Hybrid
+39013,1,Shanghai Dragons,Lijiang Tower,4440,Qualifiers,Control
+39013,2,Shanghai Dragons,Circuit royal,4440,Qualifiers,Escort
+39013,3,Shanghai Dragons,King's Row,4440,Qualifiers,Hybrid
+39013,4,Shanghai Dragons,Colosseo,4440,Qualifiers,Push
+39031,1,Philadelphia Fusion,Ilios,4140,Qualifiers,Control
+39031,2,Philadelphia Fusion,Watchpoint: Gibraltar,4140,Qualifiers,Escort
+39031,3,Philadelphia Fusion,Eichenwalde,4140,Qualifiers,Hybrid
+39031,4,Philadelphia Fusion,New Queen Street,4140,Qualifiers,Push
+39005,1,London Spitfire,New Queen Street,5640,Qualifiers,Push
+39005,2,London Spitfire,Circuit royal,5640,Qualifiers,Escort
+39005,3,London Spitfire,Midtown,5640,Qualifiers,Hybrid
+39005,4,London Spitfire,Ilios,5640,Qualifiers,Control
+39005,5,London Spitfire,Colosseo,5640,Qualifiers,Push
+39006,1,Houston Outlaws,Colosseo,5580,Qualifiers,Push
+39006,2,Houston Outlaws,Route 66,5580,Qualifiers,Escort
+39006,3,Houston Outlaws,Eichenwalde,5580,Qualifiers,Hybrid
+39006,4,Houston Outlaws,Oasis,5580,Qualifiers,Control
+39006,5,Houston Outlaws,New Queen Street,5580,Qualifiers,Push
+39007,1,Florida Mayhem,New Queen Street,4380,Qualifiers,Push
+39007,2,Florida Mayhem,Watchpoint: Gibraltar,4380,Qualifiers,Escort
+39007,3,Florida Mayhem,Midtown,4380,Qualifiers,Hybrid
+39007,4,Florida Mayhem,Ilios,4380,Qualifiers,Control
+39024,1,Shanghai Dragons,Oasis,4740,Qualifiers,Control
+39024,2,Shanghai Dragons,Watchpoint: Gibraltar,4740,Qualifiers,Escort
+39024,3,Shanghai Dragons,Eichenwalde,4740,Qualifiers,Hybrid
+39024,4,Shanghai Dragons,Colosseo,4740,Qualifiers,Push
+39018,1,Los Angeles Valiant,Lijiang Tower,4260,Qualifiers,Control
+39018,2,Los Angeles Valiant,Dorado,4260,Qualifiers,Escort
+39018,3,Los Angeles Valiant,Midtown,4260,Qualifiers,Hybrid
+39018,4,Los Angeles Valiant,New Queen Street,4260,Qualifiers,Push
+39023,1,Hangzhou Spark,Ilios,6600,Qualifiers,Control
+39023,2,Hangzhou Spark,Route 66,6600,Qualifiers,Escort
+39023,3,Hangzhou Spark,King's Row,6600,Qualifiers,Hybrid
+39023,4,Hangzhou Spark,Colosseo,6600,Qualifiers,Push
+39023,5,Hangzhou Spark,Lijiang Tower,6600,Qualifiers,Control
+39008,1,Dallas Fuel,New Queen Street,3300,Qualifiers,Push
+39008,2,Dallas Fuel,Dorado,3300,Qualifiers,Escort
+39008,3,Dallas Fuel,King's Row,3300,Qualifiers,Hybrid
+39009,1,Los Angeles Gladiators,New Queen Street,2760,Qualifiers,Push
+39009,2,Los Angeles Gladiators,Circuit royal,2760,Qualifiers,Escort
+39009,3,Los Angeles Gladiators,King's Row,2760,Qualifiers,Hybrid
+39041,1,San Francisco Shock,Ilios,6420,Tournament,Control
+39041,2,San Francisco Shock,Eichenwalde,6420,Tournament,Hybrid
+39041,3,San Francisco Shock,Dorado,6420,Tournament,Escort
+39041,4,San Francisco Shock,New Queen Street,6420,Tournament,Push
+39041,5,San Francisco Shock,Lijiang Tower,6420,Tournament,Control
+39042,1,Atlanta Reign,Ilios,4980,Tournament,Control
+39042,2,Atlanta Reign,King's Row,4980,Tournament,Hybrid
+39042,3,Atlanta Reign,Watchpoint: Gibraltar,4980,Tournament,Escort
+39042,4,Atlanta Reign,New Queen Street,4980,Tournament,Push
+39043,1,Los Angeles Gladiators,Lijiang Tower,3660,Tournament,Control
+39043,2,Los Angeles Gladiators,Eichenwalde,3660,Tournament,Hybrid
+39043,3,Los Angeles Gladiators,Circuit royal,3660,Tournament,Escort
+39044,1,Dallas Fuel,Lijiang Tower,3960,Tournament,Control
+39044,2,Dallas Fuel,Midtown,3960,Tournament,Hybrid
+39044,3,Dallas Fuel,Dorado,3960,Tournament,Escort
+39061,1,Philadelphia Fusion,Oasis,3840,Tournament,Control
+39061,2,Philadelphia Fusion,Midtown,3840,Tournament,Hybrid
+39061,3,Philadelphia Fusion,Watchpoint: Gibraltar,3840,Tournament,Escort
+39061,4,Philadelphia Fusion,New Queen Street,3840,Tournament,Push
+39062,1,Shanghai Dragons,Oasis,6120,Tournament,Control
+39062,2,Shanghai Dragons,Midtown,6120,Tournament,Hybrid
+39062,3,Shanghai Dragons,Route 66,6120,Tournament,Escort
+39062,4,Shanghai Dragons,New Queen Street,6120,Tournament,Push
+39062,5,Shanghai Dragons,Lijiang Tower,6120,Tournament,Control
+39045,1,Atlanta Reign,Ilios,4140,Tournament,Control
+39045,2,Atlanta Reign,King's Row,4140,Tournament,Hybrid
+39045,3,Atlanta Reign,Dorado,4140,Tournament,Escort
+39045,4,Atlanta Reign,Colosseo,4140,Tournament,Push
+39053,1,Los Angeles Gladiators,Lijiang Tower,5280,Tournament,Control
+39053,2,Los Angeles Gladiators,King's Row,5280,Tournament,Hybrid
+39053,3,Los Angeles Gladiators,Watchpoint: Gibraltar,5280,Tournament,Escort
+39053,4,Los Angeles Gladiators,Colosseo,5280,Tournament,Push
+39051,1,Florida Mayhem,Ilios,5100,Tournament,Control
+39051,2,Florida Mayhem,Midtown,5100,Tournament,Hybrid
+39051,3,Florida Mayhem,Watchpoint: Gibraltar,5100,Tournament,Escort
+39051,4,Florida Mayhem,Colosseo,5100,Tournament,Push
+39054,1,Houston Outlaws,Lijiang Tower,4800,Tournament,Control
+39054,2,Houston Outlaws,Eichenwalde,4800,Tournament,Hybrid
+39054,3,Houston Outlaws,Circuit royal,4800,Tournament,Escort
+39054,4,Houston Outlaws,Colosseo,4800,Tournament,Push
+39066,1,Seoul Dynasty,Ilios,3480,Tournament,Control
+39066,2,Seoul Dynasty,Midtown,3480,Tournament,Hybrid
+39066,3,Seoul Dynasty,Dorado,3480,Tournament,Escort
+39063,1,Philadelphia Fusion,Lijiang Tower,3780,Tournament,Control
+39063,2,Philadelphia Fusion,Eichenwalde,3780,Tournament,Hybrid
+39063,3,Philadelphia Fusion,Watchpoint: Gibraltar,3780,Tournament,Escort
+39052,1,Dallas Fuel,Lijiang Tower,4260,Tournament,Control
+39052,2,Dallas Fuel,Midtown,4260,Tournament,Hybrid
+39052,3,Dallas Fuel,Watchpoint: Gibraltar,4260,Tournament,Escort
+39052,4,Dallas Fuel,Colosseo,4260,Tournament,Push
+39049,1,San Francisco Shock,Ilios,4140,Tournament,Control
+39049,2,San Francisco Shock,Eichenwalde,4140,Tournament,Hybrid
+39049,3,San Francisco Shock,Route 66,4140,Tournament,Escort
+39049,4,San Francisco Shock,Colosseo,4140,Tournament,Push
+39046,1,Los Angeles Gladiators,Ilios,3780,Tournament,Control
+39046,2,Los Angeles Gladiators,King's Row,3780,Tournament,Hybrid
+39046,3,Los Angeles Gladiators,Dorado,3780,Tournament,Escort
+39050,1,Dallas Fuel,Oasis,3060,Tournament,Control
+39050,2,Dallas Fuel,Midtown,3060,Tournament,Hybrid
+39050,3,Dallas Fuel,Circuit royal,3060,Tournament,Escort
+39065,1,Seoul Dynasty,Oasis,5940,Tournament,Control
+39065,2,Seoul Dynasty,King's Row,5940,Tournament,Hybrid
+39065,3,Seoul Dynasty,Watchpoint: Gibraltar,5940,Tournament,Escort
+39065,4,Seoul Dynasty,New Queen Street,5940,Tournament,Push
+39065,5,Seoul Dynasty,Ilios,5940,Tournament,Control
+39064,1,Seoul Dynasty,Lijiang Tower,4320,Tournament,Control
+39064,2,Seoul Dynasty,Eichenwalde,4320,Tournament,Hybrid
+39064,3,Seoul Dynasty,Watchpoint: Gibraltar,4320,Tournament,Escort
+39064,4,Seoul Dynasty,New Queen Street,4320,Tournament,Push
+39048,1,Dallas Fuel,Ilios,4620,Tournament,Control
+39048,2,Dallas Fuel,King's Row,4620,Tournament,Hybrid
+39048,3,Dallas Fuel,Circuit royal,4620,Tournament,Escort
+39048,4,Dallas Fuel,Colosseo,4620,Tournament,Push
+39047,1,Los Angeles Gladiators,Ilios,4440,Tournament,Control
+39047,2,Los Angeles Gladiators,King's Row,4440,Tournament,Hybrid
+39047,3,Los Angeles Gladiators,Route 66,4440,Tournament,Escort
+39047,4,Los Angeles Gladiators,Colosseo,4440,Tournament,Push
+39161,1,London Spitfire,Ilios,5160,Qualifiers,Control
+39161,2,London Spitfire,Eichenwalde,5160,Qualifiers,Hybrid
+39161,3,London Spitfire,Watchpoint: Gibraltar,5160,Qualifiers,Escort
+39161,4,London Spitfire,Colosseo,5160,Qualifiers,Push
+39161,5,London Spitfire,Oasis,5160,Qualifiers,Control
+39162,1,San Francisco Shock,Lijiang Tower,3480,Qualifiers,Control
+39162,2,San Francisco Shock,Midtown,3480,Qualifiers,Hybrid
+39162,3,San Francisco Shock,Circuit royal,3480,Qualifiers,Escort
+39163,1,Washington Justice,Ilios,4260,Qualifiers,Control
+39163,2,Washington Justice,King's Row,4260,Qualifiers,Hybrid
+39163,3,Washington Justice,Route 66,4260,Qualifiers,Escort
+39163,4,Washington Justice,Colosseo,4260,Qualifiers,Push
+39164,1,London Spitfire,Lijiang Tower,4680,Qualifiers,Control
+39164,2,London Spitfire,Midtown,4680,Qualifiers,Hybrid
+39164,3,London Spitfire,Dorado,4680,Qualifiers,Escort
+39164,4,London Spitfire,New Queen Street,4680,Qualifiers,Push
+39165,1,Atlanta Reign,Oasis,4740,Qualifiers,Control
+39165,2,Atlanta Reign,Eichenwalde,4740,Qualifiers,Hybrid
+39165,3,Atlanta Reign,Circuit royal,4740,Qualifiers,Escort
+39165,4,Atlanta Reign,Colosseo,4740,Qualifiers,Push
+39165,5,Atlanta Reign,Lijiang Tower,4740,Qualifiers,Control
+39166,1,Los Angeles Gladiators,Lijiang Tower,3720,Qualifiers,Control
+39166,2,Los Angeles Gladiators,King's Row,3720,Qualifiers,Hybrid
+39166,3,Los Angeles Gladiators,Route 66,3720,Qualifiers,Escort
+39167,1,Houston Outlaws,Oasis,5280,Qualifiers,Control
+39167,2,Houston Outlaws,Eichenwalde,5280,Qualifiers,Hybrid
+39167,3,Houston Outlaws,Dorado,5280,Qualifiers,Escort
+39167,4,Houston Outlaws,Colosseo,5280,Qualifiers,Push
+39167,5,Houston Outlaws,Lijiang Tower,5280,Qualifiers,Control
+39168,1,Los Angeles Gladiators,Oasis,4440,Qualifiers,Control
+39168,2,Los Angeles Gladiators,Midtown,4440,Qualifiers,Hybrid
+39168,3,Los Angeles Gladiators,Circuit royal,4440,Qualifiers,Escort
+39168,4,Los Angeles Gladiators,New Queen Street,4440,Qualifiers,Push
+39169,1,Atlanta Reign,Ilios,4080,Qualifiers,Control
+39169,2,Atlanta Reign,Midtown,4080,Qualifiers,Hybrid
+39169,3,Atlanta Reign,Watchpoint: Gibraltar,4080,Qualifiers,Escort
+39170,1,Florida Mayhem,Oasis,4680,Qualifiers,Control
+39170,2,Florida Mayhem,Midtown,4680,Qualifiers,Hybrid
+39170,3,Florida Mayhem,Circuit royal,4680,Qualifiers,Escort
+39170,4,Florida Mayhem,Colosseo,4680,Qualifiers,Push
+39171,1,San Francisco Shock,Ilios,3000,Qualifiers,Control
+39171,2,San Francisco Shock,Eichenwalde,3000,Qualifiers,Hybrid
+39171,3,San Francisco Shock,Route 66,3000,Qualifiers,Escort
+39172,1,Paris Eternal,Lijiang Tower,6000,Qualifiers,Control
+39172,2,Paris Eternal,Eichenwalde,6000,Qualifiers,Hybrid
+39172,3,Paris Eternal,Watchpoint: Gibraltar,6000,Qualifiers,Escort
+39172,4,Paris Eternal,Colosseo,6000,Qualifiers,Push
+39172,5,Paris Eternal,Ilios,6000,Qualifiers,Control
+39173,1,Houston Outlaws,Ilios,3300,Qualifiers,Control
+39173,2,Houston Outlaws,Midtown,3300,Qualifiers,Hybrid
+39173,3,Houston Outlaws,Watchpoint: Gibraltar,3300,Qualifiers,Escort
+39010,1,Los Angeles Valiant,Oasis,6360,Qualifiers,Control
+39010,2,Los Angeles Valiant,Midtown,6360,Qualifiers,Hybrid
+39010,3,Los Angeles Valiant,Watchpoint: Gibraltar,6360,Qualifiers,Escort
+39010,4,Los Angeles Valiant,New Queen Street,6360,Qualifiers,Push
+39010,5,Los Angeles Valiant,Lijiang Tower,6360,Qualifiers,Control
+39111,1,Seoul Dynasty,Ilios,6540,Qualifiers,Control
+39111,2,Seoul Dynasty,King's Row,6540,Qualifiers,Hybrid
+39111,3,Seoul Dynasty,Watchpoint: Gibraltar,6540,Qualifiers,Escort
+39111,4,Seoul Dynasty,Colosseo,6540,Qualifiers,Push
+39111,5,Seoul Dynasty,Oasis,6540,Qualifiers,Control
+39174,1,London Spitfire,Colosseo,4200,Qualifiers,Push
+39174,2,London Spitfire,Route 66,4200,Qualifiers,Escort
+39174,3,London Spitfire,Midtown,4200,Qualifiers,Hybrid
+39175,1,Dallas Fuel,New Queen Street,3840,Qualifiers,Push
+39175,2,Dallas Fuel,Route 66,3840,Qualifiers,Escort
+39175,3,Dallas Fuel,King's Row,3840,Qualifiers,Hybrid
+39176,1,Atlanta Reign,New Queen Street,4380,Qualifiers,Push
+39176,2,Atlanta Reign,Dorado,4380,Qualifiers,Escort
+39176,3,Atlanta Reign,Eichenwalde,4380,Qualifiers,Hybrid
+39176,4,Atlanta Reign,Oasis,4380,Qualifiers,Control
+39112,1,Hangzhou Spark,Ilios,3360,Qualifiers,Control
+39112,2,Hangzhou Spark,King's Row,3360,Qualifiers,Hybrid
+39112,3,Hangzhou Spark,Route 66,3360,Qualifiers,Escort
+39113,1,Seoul Dynasty,Lijiang Tower,3360,Qualifiers,Control
+39113,2,Seoul Dynasty,King's Row,3360,Qualifiers,Hybrid
+39113,3,Seoul Dynasty,Route 66,3360,Qualifiers,Escort
+39114,1,Chengdu Hunters,Lijiang Tower,5100,Qualifiers,Control
+39114,2,Chengdu Hunters,Eichenwalde,5100,Qualifiers,Hybrid
+39114,3,Chengdu Hunters,Circuit royal,5100,Qualifiers,Escort
+39114,4,Chengdu Hunters,Colosseo,5100,Qualifiers,Push
+39177,1,Toronto Defiant,New Queen Street,4200,Qualifiers,Push
+39177,2,Toronto Defiant,Watchpoint: Gibraltar,4200,Qualifiers,Escort
+39177,3,Toronto Defiant,Eichenwalde,4200,Qualifiers,Hybrid
+39177,4,Toronto Defiant,Lijiang Tower,4200,Qualifiers,Control
+39178,1,San Francisco Shock,New Queen Street,5220,Qualifiers,Push
+39178,2,San Francisco Shock,Route 66,5220,Qualifiers,Escort
+39178,3,San Francisco Shock,King's Row,5220,Qualifiers,Hybrid
+39178,4,San Francisco Shock,Ilios,5220,Qualifiers,Control
+39179,1,Dallas Fuel,Colosseo,3600,Qualifiers,Push
+39179,2,Dallas Fuel,Dorado,3600,Qualifiers,Escort
+39179,3,Dallas Fuel,Eichenwalde,3600,Qualifiers,Hybrid
+39115,1,Los Angeles Valiant,Oasis,3540,Qualifiers,Control
+39115,2,Los Angeles Valiant,Midtown,3540,Qualifiers,Hybrid
+39115,3,Los Angeles Valiant,Watchpoint: Gibraltar,3540,Qualifiers,Escort
+39115,4,Los Angeles Valiant,Colosseo,3540,Qualifiers,Push
+39116,1,Hangzhou Spark,Oasis,3000,Qualifiers,Control
+39116,2,Hangzhou Spark,Midtown,3000,Qualifiers,Hybrid
+39116,3,Hangzhou Spark,Circuit royal,3000,Qualifiers,Escort
+39180,1,San Francisco Shock,Colosseo,4680,Qualifiers,Push
+39180,2,San Francisco Shock,Circuit royal,4680,Qualifiers,Escort
+39180,3,San Francisco Shock,Midtown,4680,Qualifiers,Hybrid
+39180,4,San Francisco Shock,Lijiang Tower,4680,Qualifiers,Control
+39181,1,Los Angeles Gladiators,New Queen Street,3540,Qualifiers,Push
+39181,2,Los Angeles Gladiators,Watchpoint: Gibraltar,3540,Qualifiers,Escort
+39181,3,Los Angeles Gladiators,Eichenwalde,3540,Qualifiers,Hybrid
+39182,1,Boston Uprising,New Queen Street,3420,Qualifiers,Push
+39182,2,Boston Uprising,Watchpoint: Gibraltar,3420,Qualifiers,Escort
+39182,3,Boston Uprising,King's Row,3420,Qualifiers,Hybrid
+39117,1,Philadelphia Fusion,Colosseo,5400,Qualifiers,Push
+39117,2,Philadelphia Fusion,Route 66,5400,Qualifiers,Escort
+39117,3,Philadelphia Fusion,Eichenwalde,5400,Qualifiers,Hybrid
+39117,4,Philadelphia Fusion,Lijiang Tower,5400,Qualifiers,Control
+39117,5,Philadelphia Fusion,New Queen Street,5400,Qualifiers,Push
+39118,1,Chengdu Hunters,New Queen Street,4140,Qualifiers,Push
+39118,2,Chengdu Hunters,Route 66,4140,Qualifiers,Escort
+39118,3,Chengdu Hunters,Midtown,4140,Qualifiers,Hybrid
+39118,4,Chengdu Hunters,Oasis,4140,Qualifiers,Control
+39183,1,London Spitfire,Oasis,3360,Qualifiers,Control
+39183,2,London Spitfire,Eichenwalde,3360,Qualifiers,Hybrid
+39183,3,London Spitfire,Circuit royal,3360,Qualifiers,Escort
+39184,1,Houston Outlaws,Lijiang Tower,7740,Qualifiers,Control
+39184,2,Houston Outlaws,King's Row,7740,Qualifiers,Hybrid
+39184,3,Houston Outlaws,Route 66,7740,Qualifiers,Escort
+39184,4,Houston Outlaws,New Queen Street,7740,Qualifiers,Push
+39184,5,Houston Outlaws,Ilios,7740,Qualifiers,Control
+39185,1,Los Angeles Gladiators,Ilios,4560,Qualifiers,Control
+39185,2,Los Angeles Gladiators,King's Row,4560,Qualifiers,Hybrid
+39185,3,Los Angeles Gladiators,Circuit royal,4560,Qualifiers,Escort
+39185,4,Los Angeles Gladiators,Colosseo,4560,Qualifiers,Push
+39119,1,Seoul Dynasty,Colosseo,3180,Qualifiers,Push
+39119,2,Seoul Dynasty,Dorado,3180,Qualifiers,Escort
+39119,3,Seoul Dynasty,Eichenwalde,3180,Qualifiers,Hybrid
+39120,1,Chengdu Hunters,New Queen Street,3600,Qualifiers,Push
+39120,2,Chengdu Hunters,Circuit royal,3600,Qualifiers,Escort
+39120,3,Chengdu Hunters,King's Row,3600,Qualifiers,Hybrid
+39121,1,Shanghai Dragons,Colosseo,3960,Qualifiers,Push
+39121,2,Shanghai Dragons,Watchpoint: Gibraltar,3960,Qualifiers,Escort
+39121,3,Shanghai Dragons,King's Row,3960,Qualifiers,Hybrid
+39186,1,San Francisco Shock,Oasis,3660,Qualifiers,Control
+39186,2,San Francisco Shock,King's Row,3660,Qualifiers,Hybrid
+39186,3,San Francisco Shock,Watchpoint: Gibraltar,3660,Qualifiers,Escort
+39187,1,Los Angeles Gladiators,Lijiang Tower,4560,Qualifiers,Control
+39187,2,Los Angeles Gladiators,Midtown,4560,Qualifiers,Hybrid
+39187,3,Los Angeles Gladiators,Dorado,4560,Qualifiers,Escort
+39187,4,Los Angeles Gladiators,Colosseo,4560,Qualifiers,Push
+39188,1,Toronto Defiant,Ilios,6180,Qualifiers,Control
+39188,2,Toronto Defiant,King's Row,6180,Qualifiers,Hybrid
+39188,3,Toronto Defiant,Route 66,6180,Qualifiers,Escort
+39188,4,Toronto Defiant,New Queen Street,6180,Qualifiers,Push
+39188,5,Toronto Defiant,Oasis,6180,Qualifiers,Control
+39122,1,Seoul Dynasty,New Queen Street,3360,Qualifiers,Push
+39122,2,Seoul Dynasty,Watchpoint: Gibraltar,3360,Qualifiers,Escort
+39122,3,Seoul Dynasty,Midtown,3360,Qualifiers,Hybrid
+39123,1,Shanghai Dragons,Colosseo,3180,Qualifiers,Push
+39123,2,Shanghai Dragons,Dorado,3180,Qualifiers,Escort
+39123,3,Shanghai Dragons,Eichenwalde,3180,Qualifiers,Hybrid
+39189,1,London Spitfire,Oasis,4860,Qualifiers,Control
+39189,2,London Spitfire,King's Row,4860,Qualifiers,Hybrid
+39189,3,London Spitfire,Route 66,4860,Qualifiers,Escort
+39189,4,London Spitfire,New Queen Street,4860,Qualifiers,Push
+39189,5,London Spitfire,Lijiang Tower,4860,Qualifiers,Control
+39190,1,Dallas Fuel,Oasis,5940,Qualifiers,Control
+39190,2,Dallas Fuel,Eichenwalde,5940,Qualifiers,Hybrid
+39190,3,Dallas Fuel,Circuit royal,5940,Qualifiers,Escort
+39190,4,Dallas Fuel,New Queen Street,5940,Qualifiers,Push
+39190,5,Dallas Fuel,Lijiang Tower,5940,Qualifiers,Control
+39191,1,Florida Mayhem,Lijiang Tower,5700,Qualifiers,Control
+39191,2,Florida Mayhem,King's Row,5700,Qualifiers,Hybrid
+39191,3,Florida Mayhem,Route 66,5700,Qualifiers,Escort
+39191,4,Florida Mayhem,New Queen Street,5700,Qualifiers,Push
+39191,5,Florida Mayhem,Ilios,5700,Qualifiers,Control
+39124,1,Philadelphia Fusion,Lijiang Tower,4560,Qualifiers,Control
+39124,2,Philadelphia Fusion,King's Row,4560,Qualifiers,Hybrid
+39124,3,Philadelphia Fusion,Dorado,4560,Qualifiers,Escort
+39124,4,Philadelphia Fusion,New Queen Street,4560,Qualifiers,Push
+39125,1,Shanghai Dragons,Ilios,4500,Qualifiers,Control
+39125,2,Shanghai Dragons,Midtown,4500,Qualifiers,Hybrid
+39125,3,Shanghai Dragons,Dorado,4500,Qualifiers,Escort
+39125,4,Shanghai Dragons,New Queen Street,4500,Qualifiers,Push
+39192,1,Houston Outlaws,New Queen Street,5940,Qualifiers,Push
+39192,2,Houston Outlaws,Circuit royal,5940,Qualifiers,Escort
+39192,3,Houston Outlaws,King's Row,5940,Qualifiers,Hybrid
+39192,4,Houston Outlaws,Oasis,5940,Qualifiers,Control
+39192,5,Houston Outlaws,Colosseo,5940,Qualifiers,Push
+39193,1,San Francisco Shock,Colosseo,3900,Qualifiers,Push
+39193,2,San Francisco Shock,Dorado,3900,Qualifiers,Escort
+39193,3,San Francisco Shock,Eichenwalde,3900,Qualifiers,Hybrid
+39193,4,San Francisco Shock,Oasis,3900,Qualifiers,Control
+39194,1,Atlanta Reign,Colosseo,2640,Qualifiers,Push
+39194,2,Atlanta Reign,Dorado,2640,Qualifiers,Escort
+39194,3,Atlanta Reign,Midtown,2640,Qualifiers,Hybrid
+39126,1,Seoul Dynasty,Lijiang Tower,3720,Qualifiers,Control
+39126,2,Seoul Dynasty,Eichenwalde,3720,Qualifiers,Hybrid
+39126,3,Seoul Dynasty,Route 66,3720,Qualifiers,Escort
+39127,1,Hangzhou Spark,Oasis,3600,Qualifiers,Control
+39127,2,Hangzhou Spark,Eichenwalde,3600,Qualifiers,Hybrid
+39127,3,Hangzhou Spark,Dorado,3600,Qualifiers,Escort
+39128,1,Shanghai Dragons,Lijiang Tower,3240,Qualifiers,Control
+39128,2,Shanghai Dragons,Eichenwalde,3240,Qualifiers,Hybrid
+39128,3,Shanghai Dragons,Circuit royal,3240,Qualifiers,Escort
+39195,1,Washington Justice,New Queen Street,5040,Qualifiers,Push
+39195,2,Washington Justice,Circuit royal,5040,Qualifiers,Escort
+39195,3,Washington Justice,Midtown,5040,Qualifiers,Hybrid
+39195,4,Washington Justice,Ilios,5040,Qualifiers,Control
+39195,5,Washington Justice,Colosseo,5040,Qualifiers,Push
+39196,1,Houston Outlaws,Colosseo,5880,Qualifiers,Push
+39196,2,Houston Outlaws,Dorado,5880,Qualifiers,Escort
+39196,3,Houston Outlaws,Midtown,5880,Qualifiers,Hybrid
+39196,4,Houston Outlaws,Lijiang Tower,5880,Qualifiers,Control
+39196,5,Houston Outlaws,New Queen Street,5880,Qualifiers,Push
+39197,1,Los Angeles Gladiators,New Queen Street,3420,Qualifiers,Push
+39197,2,Los Angeles Gladiators,Dorado,3420,Qualifiers,Escort
+39197,3,Los Angeles Gladiators,Eichenwalde,3420,Qualifiers,Hybrid
+39129,1,Philadelphia Fusion,Oasis,4680,Qualifiers,Control
+39129,2,Philadelphia Fusion,Midtown,4680,Qualifiers,Hybrid
+39129,3,Philadelphia Fusion,Circuit royal,4680,Qualifiers,Escort
+39129,4,Philadelphia Fusion,New Queen Street,4680,Qualifiers,Push
+39130,1,Hangzhou Spark,Ilios,4860,Qualifiers,Control
+39130,2,Hangzhou Spark,King's Row,4860,Qualifiers,Hybrid
+39130,3,Hangzhou Spark,Circuit royal,4860,Qualifiers,Escort
+39130,4,Hangzhou Spark,New Queen Street,4860,Qualifiers,Push
+39198,1,Dallas Fuel,New Queen Street,4920,Qualifiers,Push
+39198,2,Dallas Fuel,Watchpoint: Gibraltar,4920,Qualifiers,Escort
+39198,3,Dallas Fuel,King's Row,4920,Qualifiers,Hybrid
+39198,4,Dallas Fuel,Ilios,4920,Qualifiers,Control
+39199,1,Boston Uprising,New Queen Street,4020,Qualifiers,Push
+39199,2,Boston Uprising,Dorado,4020,Qualifiers,Escort
+39199,3,Boston Uprising,Midtown,4020,Qualifiers,Hybrid
+39199,4,Boston Uprising,Ilios,4020,Qualifiers,Control
+39131,1,London Spitfire,Lijiang Tower,5220,Tournament,Control
+39131,2,London Spitfire,Eichenwalde,5220,Tournament,Hybrid
+39131,3,London Spitfire,Circuit royal,5220,Tournament,Escort
+39131,4,London Spitfire,Colosseo,5220,Tournament,Push
+39137,1,Houston Outlaws,Oasis,3840,Tournament,Control
+39137,2,Houston Outlaws,Midtown,3840,Tournament,Hybrid
+39137,3,Houston Outlaws,Watchpoint: Gibraltar,3840,Tournament,Escort
+39133,1,Shanghai Dragons,Ilios,4320,Tournament,Control
+39133,2,Shanghai Dragons,Eichenwalde,4320,Tournament,Hybrid
+39133,3,Shanghai Dragons,Dorado,4320,Tournament,Escort
+39135,1,Hangzhou Spark,Lijiang Tower,5400,Tournament,Control
+39135,2,Hangzhou Spark,Eichenwalde,5400,Tournament,Hybrid
+39135,3,Hangzhou Spark,Circuit royal,5400,Tournament,Escort
+39135,4,Hangzhou Spark,Colosseo,5400,Tournament,Push
+39153,1,Los Angeles Gladiators,Lijiang Tower,5160,Tournament,Control
+39153,2,Los Angeles Gladiators,Midtown,5160,Tournament,Hybrid
+39153,3,Los Angeles Gladiators,Dorado,5160,Tournament,Escort
+39153,4,Los Angeles Gladiators,New Queen Street,5160,Tournament,Push
+39139,1,San Francisco Shock,Ilios,5640,Tournament,Control
+39139,2,San Francisco Shock,Eichenwalde,5640,Tournament,Hybrid
+39139,3,San Francisco Shock,Route 66,5640,Tournament,Escort
+39139,4,San Francisco Shock,Colosseo,5640,Tournament,Push
+39151,1,Shanghai Dragons,Oasis,3720,Tournament,Control
+39151,2,Shanghai Dragons,Midtown,3720,Tournament,Hybrid
+39151,3,Shanghai Dragons,Circuit royal,3720,Tournament,Escort
+39159,1,Hangzhou Spark,Ilios,3840,Tournament,Control
+39159,2,Hangzhou Spark,Eichenwalde,3840,Tournament,Hybrid
+39159,3,Hangzhou Spark,Dorado,3840,Tournament,Escort
+39146,1,Florida Mayhem,Lijiang Tower,5580,Tournament,Control
+39146,2,Florida Mayhem,Eichenwalde,5580,Tournament,Hybrid
+39146,3,Florida Mayhem,Watchpoint: Gibraltar,5580,Tournament,Escort
+39146,4,Florida Mayhem,Colosseo,5580,Tournament,Push
+39146,5,Florida Mayhem,Oasis,5580,Tournament,Control
+39155,1,Houston Outlaws,Oasis,6420,Tournament,Control
+39155,2,Houston Outlaws,Eichenwalde,6420,Tournament,Hybrid
+39155,3,Houston Outlaws,Dorado,6420,Tournament,Escort
+39155,4,Houston Outlaws,Colosseo,6420,Tournament,Push
+39155,5,Houston Outlaws,Lijiang Tower,6420,Tournament,Control
+39150,1,Philadelphia Fusion,Oasis,5460,Tournament,Control
+39150,2,Philadelphia Fusion,King's Row,5460,Tournament,Hybrid
+39150,3,Philadelphia Fusion,Route 66,5460,Tournament,Escort
+39150,4,Philadelphia Fusion,New Queen Street,5460,Tournament,Push
+39158,1,Atlanta Reign,Oasis,6840,Tournament,Control
+39158,2,Atlanta Reign,King's Row,6840,Tournament,Hybrid
+39158,3,Atlanta Reign,Circuit royal,6840,Tournament,Escort
+39158,4,Atlanta Reign,Colosseo,6840,Tournament,Push
+39158,5,Atlanta Reign,Lijiang Tower,6840,Tournament,Control
+39156,1,Atlanta Reign,Oasis,4560,Tournament,Control
+39156,2,Atlanta Reign,King's Row,4560,Tournament,Escort
+39156,3,Atlanta Reign,Dorado,4560,Tournament,Escort
+39156,4,Atlanta Reign,Colosseo,4560,Tournament,Push
+39147,1,Philadelphia Fusion,Ilios,6780,Tournament,Control
+39147,2,Philadelphia Fusion,King's Row,6780,Tournament,Hybrid
+39147,3,Philadelphia Fusion,Watchpoint: Gibraltar,6780,Tournament,Escort
+39147,4,Philadelphia Fusion,New Queen Street,6780,Tournament,Push
+39147,5,Philadelphia Fusion,Lijiang Tower,6780,Tournament,Control
+39154,1,Los Angeles Gladiators,Oasis,6480,Tournament,Control
+39154,2,Los Angeles Gladiators,Midtown,6480,Tournament,Hybrid
+39154,3,Los Angeles Gladiators,Dorado,6480,Tournament,Escort
+39154,4,Los Angeles Gladiators,Colosseo,6480,Tournament,Push
+39154,5,Los Angeles Gladiators,Ilios,6480,Tournament,Control
+39140,1,San Francisco Shock,Oasis,3960,Tournament,Control
+39140,2,San Francisco Shock,Eichenwalde,3960,Tournament,Hybrid
+39140,3,San Francisco Shock,Circuit royal,3960,Tournament,Escort
+39144,1,Atlanta Reign,Lijiang Tower,4680,Tournament,Control
+39144,2,Atlanta Reign,King's Row,4680,Tournament,Hybrid
+39144,3,Atlanta Reign,Circuit royal,4680,Tournament,Escort
+39144,4,Atlanta Reign,Colosseo,4680,Tournament,Push
+39148,1,Philadelphia Fusion,Oasis,7140,Tournament,Control
+39148,2,Philadelphia Fusion,King's Row,7140,Tournament,Hybrid
+39148,3,Philadelphia Fusion,Dorado,7140,Tournament,Escort
+39148,4,Philadelphia Fusion,New Queen Street,7140,Tournament,Push
+39148,5,Philadelphia Fusion,Lijiang Tower,7140,Tournament,Control
+39141,1,San Francisco Shock,Ilios,5760,Tournament,Control
+39141,2,San Francisco Shock,Eichenwalde,5760,Tournament,Hybrid
+39141,3,San Francisco Shock,Circuit royal,5760,Tournament,Escort
+39141,4,San Francisco Shock,Colosseo,5760,Tournament,Push
+39141,5,San Francisco Shock,Oasis,5760,Tournament,Control
+39145,1,Atlanta Reign,Lijiang Tower,4380,Tournament,Control
+39145,2,Atlanta Reign,King's Row,4380,Tournament,Hybrid
+39145,3,Atlanta Reign,Route 66,4380,Tournament,Escort
+39145,4,Atlanta Reign,Colosseo,4380,Tournament,Push
+39143,1,Los Angeles Gladiators,Ilios,4440,Tournament,Control
+39143,2,Los Angeles Gladiators,King's Row,4440,Tournament,Hybrid
+39143,3,Los Angeles Gladiators,Watchpoint: Gibraltar,4440,Tournament,Escort
+39143,4,Los Angeles Gladiators,Colosseo,4440,Tournament,Push
+39142,1,Los Angeles Gladiators,Ilios,8940,Tournament,Control
+39142,2,Los Angeles Gladiators,Eichenwalde,8940,Tournament,Hybrid
+39142,3,Los Angeles Gladiators,Watchpoint: Gibraltar,8940,Tournament,Escort
+39142,4,Los Angeles Gladiators,New Queen Street,8940,Tournament,Push
+39142,5,Los Angeles Gladiators,Lijiang Tower,8940,Tournament,Control
+39142,6,Los Angeles Gladiators,Dorado,8940,Tournament,Escort
+39106,1,Florida Mayhem,Busan,3720,Qualifiers,Control
+39106,2,Florida Mayhem,Hollywood,3720,Qualifiers,Hybrid
+39106,3,Florida Mayhem,Watchpoint: Gibraltar,3720,Qualifiers,Escort
+39106,4,Florida Mayhem,Colosseo,3720,Qualifiers,Push
+39107,1,New York Excelsior,Nepal,6180,Qualifiers,Control
+39107,2,New York Excelsior,Midtown,6180,Qualifiers,Hybrid
+39107,3,New York Excelsior,Dorado,6180,Qualifiers,Escort
+39107,4,New York Excelsior,New Queen Street,6180,Qualifiers,Push
+39107,5,New York Excelsior,Oasis,6180,Qualifiers,Control
+39108,1,Dallas Fuel,Oasis,6180,Qualifiers,Control
+39108,2,Dallas Fuel,Paraíso,6180,Qualifiers,Hybrid
+39108,3,Dallas Fuel,Junkertown,6180,Qualifiers,Escort
+39108,4,Dallas Fuel,Colosseo,6180,Qualifiers,Push
+39108,5,Dallas Fuel,Ilios,6180,Qualifiers,Control
+39109,1,Boston Uprising,Busan,4560,Qualifiers,Control
+39109,2,Boston Uprising,Paraíso,4560,Qualifiers,Hybrid
+39109,3,Boston Uprising,Watchpoint: Gibraltar,4560,Qualifiers,Escort
+39109,4,Boston Uprising,New Queen Street,4560,Qualifiers,Push
+39110,1,San Francisco Shock,Nepal,6900,Qualifiers,Control
+39110,2,San Francisco Shock,Hollywood,6900,Qualifiers,Hybrid
+39110,3,San Francisco Shock,Circuit royal,6900,Qualifiers,Escort
+39110,4,San Francisco Shock,Colosseo,6900,Qualifiers,Push
+39110,5,San Francisco Shock,Oasis,6900,Qualifiers,Control
+39201,1,Toronto Defiant,Nepal,5820,Qualifiers,Control
+39201,2,Toronto Defiant,Paraíso,5820,Qualifiers,Hybrid
+39201,3,Toronto Defiant,Junkertown,5820,Qualifiers,Escort
+39201,4,Toronto Defiant,New Queen Street,5820,Qualifiers,Push
+39201,5,Toronto Defiant,Oasis,5820,Qualifiers,Control
+39202,1,London Spitfire,Ilios,3900,Qualifiers,Control
+39202,2,London Spitfire,Paraíso,3900,Qualifiers,Hybrid
+39202,3,London Spitfire,Dorado,3900,Qualifiers,Escort
+39203,1,Washington Justice,Busan,3240,Qualifiers,Control
+39203,2,Washington Justice,Hollywood,3240,Qualifiers,Hybrid
+39203,3,Washington Justice,Dorado,3240,Qualifiers,Escort
+39204,1,Houston Outlaws,Lijiang Tower,6060,Qualifiers,Control
+39204,2,Houston Outlaws,Hollywood,6060,Qualifiers,Hybrid
+39204,3,Houston Outlaws,Watchpoint: Gibraltar,6060,Qualifiers,Escort
+39204,4,Houston Outlaws,Colosseo,6060,Qualifiers,Push
+39204,5,Houston Outlaws,Nepal,6060,Qualifiers,Control
+39205,1,Vancouver Titans,Oasis,2880,Qualifiers,Control
+39205,2,Vancouver Titans,Paraíso,2880,Qualifiers,Hybrid
+39205,3,Vancouver Titans,Circuit royal,2880,Qualifiers,Escort
+39206,1,San Francisco Shock,Ilios,3900,Qualifiers,Control
+39206,2,San Francisco Shock,Midtown,3900,Qualifiers,Hybrid
+39206,3,San Francisco Shock,Junkertown,3900,Qualifiers,Escort
+39207,1,Dallas Fuel,Lijiang Tower,4560,Qualifiers,Control
+39207,2,Dallas Fuel,Hollywood,4560,Qualifiers,Hybrid
+39207,3,Dallas Fuel,Circuit royal,4560,Qualifiers,Escort
+39207,4,Dallas Fuel,Colosseo,4560,Qualifiers,Push
+39208,1,Toronto Defiant,Oasis,4740,Qualifiers,Control
+39208,2,Toronto Defiant,Paraíso,4740,Qualifiers,Hybrid
+39208,3,Toronto Defiant,Junkertown,4740,Qualifiers,Escort
+39208,4,Toronto Defiant,New Queen Street,4740,Qualifiers,Push
+39055,1,Shanghai Dragons,Nepal,3240,Qualifiers,Control
+39055,2,Shanghai Dragons,Hollywood,3240,Qualifiers,Hybrid
+39055,3,Shanghai Dragons,Circuit royal,3240,Qualifiers,Escort
+39056,1,Seoul Dynasty,Ilios,3540,Qualifiers,Control
+39056,2,Seoul Dynasty,Midtown,3540,Qualifiers,Hybrid
+39056,3,Seoul Dynasty,Junkertown,3540,Qualifiers,Escort
+39209,1,Vancouver Titans,Busan,3180,Qualifiers,Control
+39209,2,Vancouver Titans,Hollywood,3180,Qualifiers,Hybrid
+39209,3,Vancouver Titans,Watchpoint: Gibraltar,3180,Qualifiers,Escort
+39210,1,San Francisco Shock,Lijiang Tower,3180,Qualifiers,Control
+39210,2,San Francisco Shock,Hollywood,3180,Qualifiers,Hybrid
+39210,3,San Francisco Shock,Circuit royal,3180,Qualifiers,Escort
+39211,1,Dallas Fuel,Busan,4200,Qualifiers,Control
+39211,2,Dallas Fuel,Midtown,4200,Qualifiers,Hybrid
+39211,3,Dallas Fuel,Watchpoint: Gibraltar,4200,Qualifiers,Escort
+39211,4,Dallas Fuel,Colosseo,4200,Qualifiers,Push
+39057,1,Seoul Dynasty,Ilios,2820,Qualifiers,Control
+39057,2,Seoul Dynasty,Paraíso,2820,Qualifiers,Hybrid
+39057,3,Seoul Dynasty,Dorado,2820,Qualifiers,Escort
+39058,1,Shanghai Dragons,Lijiang Tower,3120,Qualifiers,Control
+39058,2,Shanghai Dragons,Paraíso,3120,Qualifiers,Hybrid
+39058,3,Shanghai Dragons,Watchpoint: Gibraltar,3120,Qualifiers,Escort
+39059,1,Philadelphia Fusion,Oasis,6360,Qualifiers,Control
+39059,2,Philadelphia Fusion,Midtown,6360,Qualifiers,Hybrid
+39059,3,Philadelphia Fusion,Circuit royal,6360,Qualifiers,Escort
+39059,4,Philadelphia Fusion,New Queen Street,6360,Qualifiers,Push
+39059,5,Philadelphia Fusion,Busan,6360,Qualifiers,Control
+39212,1,London Spitfire,Oasis,3300,Qualifiers,Control
+39212,2,London Spitfire,Paraíso,3300,Qualifiers,Hybrid
+39212,3,London Spitfire,Dorado,3300,Qualifiers,Escort
+39213,1,San Francisco Shock,Busan,5460,Qualifiers,Control
+39213,2,San Francisco Shock,Paraíso,5460,Qualifiers,Hybrid
+39213,3,San Francisco Shock,Junkertown,5460,Qualifiers,Escort
+39213,4,San Francisco Shock,New Queen Street,5460,Qualifiers,Push
+39214,1,Washington Justice,Lijiang Tower,2820,Qualifiers,Control
+39214,2,Washington Justice,Paraíso,2820,Qualifiers,Hybrid
+39214,3,Washington Justice,Circuit royal,2820,Qualifiers,Escort
+39060,1,Guangzhou Charge,Ilios,5400,Qualifiers,Control
+39060,2,Guangzhou Charge,Midtown,5400,Qualifiers,Hybrid
+39060,3,Guangzhou Charge,Dorado,5400,Qualifiers,Escort
+39060,4,Guangzhou Charge,Colosseo,5400,Qualifiers,Push
+39060,5,Guangzhou Charge,Nepal,5400,Qualifiers,Control
+39241,1,Chengdu Hunters,Busan,3600,Qualifiers,Control
+39241,2,Chengdu Hunters,Midtown,3600,Qualifiers,Hybrid
+39241,3,Chengdu Hunters,Junkertown,3600,Qualifiers,Escort
+39215,1,Dallas Fuel,Nepal,4980,Qualifiers,Control
+39215,2,Dallas Fuel,Midtown,4980,Qualifiers,Hybrid
+39215,3,Dallas Fuel,Junkertown,4980,Qualifiers,Escort
+39215,4,Dallas Fuel,New Queen Street,4980,Qualifiers,Push
+39216,1,Atlanta Reign,Ilios,3060,Qualifiers,Control
+39216,2,Atlanta Reign,Hollywood,3060,Qualifiers,Hybrid
+39216,3,Atlanta Reign,Watchpoint: Gibraltar,3060,Qualifiers,Escort
+39217,1,Toronto Defiant,Ilios,4500,Qualifiers,Control
+39217,2,Toronto Defiant,Midtown,4500,Qualifiers,Hybrid
+39217,3,Toronto Defiant,Dorado,4500,Qualifiers,Escort
+39217,4,Toronto Defiant,New Queen Street,4500,Qualifiers,Push
+39242,1,Chengdu Hunters,Nepal,4260,Qualifiers,Control
+39242,2,Chengdu Hunters,Hollywood,4260,Qualifiers,Hybrid
+39242,3,Chengdu Hunters,Circuit royal,4260,Qualifiers,Escort
+39242,4,Chengdu Hunters,Colosseo,4260,Qualifiers,Push
+39243,1,Seoul Dynasty,Nepal,3240,Qualifiers,Control
+39243,2,Seoul Dynasty,Hollywood,3240,Qualifiers,Hybrid
+39243,3,Seoul Dynasty,Circuit royal,3240,Qualifiers,Escort
+39218,1,Atlanta Reign,Nepal,5640,Qualifiers,Control
+39218,2,Atlanta Reign,Midtown,5640,Qualifiers,Hybrid
+39218,3,Atlanta Reign,Junkertown,5640,Qualifiers,Escort
+39218,4,Atlanta Reign,Colosseo,5640,Qualifiers,Push
+39219,1,San Francisco Shock,Oasis,3240,Qualifiers,Control
+39219,2,San Francisco Shock,Midtown,3240,Qualifiers,Hybrid
+39219,3,San Francisco Shock,Watchpoint: Gibraltar,3240,Qualifiers,Escort
+39220,1,Vancouver Titans,Ilios,5760,Qualifiers,Control
+39220,2,Vancouver Titans,Midtown,5760,Qualifiers,Hybrid
+39220,3,Vancouver Titans,Junkertown,5760,Qualifiers,Escort
+39220,4,Vancouver Titans,New Queen Street,5760,Qualifiers,Push
+39220,5,Vancouver Titans,Busan,5760,Qualifiers,Control
+39244,1,Seoul Dynasty,Busan,3300,Qualifiers,Control
+39244,2,Seoul Dynasty,Paraíso,3300,Qualifiers,Hybrid
+39244,3,Seoul Dynasty,Dorado,3300,Qualifiers,Escort
+39245,1,Hangzhou Spark,Busan,4800,Qualifiers,Control
+39245,2,Hangzhou Spark,Hollywood,4800,Qualifiers,Hybrid
+39245,3,Hangzhou Spark,Junkertown,4800,Qualifiers,Escort
+39245,4,Hangzhou Spark,New Queen Street,4800,Qualifiers,Push
+39246,1,Shanghai Dragons,Ilios,4740,Qualifiers,Control
+39246,2,Shanghai Dragons,Hollywood,4740,Qualifiers,Hybrid
+39246,3,Shanghai Dragons,Junkertown,4740,Qualifiers,Escort
+39246,4,Shanghai Dragons,Colosseo,4740,Qualifiers,Push
+39221,1,Toronto Defiant,Oasis,3780,Qualifiers,Control
+39221,2,Toronto Defiant,Hollywood,3780,Qualifiers,Hybrid
+39221,3,Toronto Defiant,Circuit royal,3780,Qualifiers,Escort
+39222,1,Los Angeles Gladiators,Nepal,3180,Qualifiers,Control
+39222,2,Los Angeles Gladiators,Midtown,3180,Qualifiers,Hybrid
+39222,3,Los Angeles Gladiators,Circuit royal,3180,Qualifiers,Escort
+39223,1,Houston Outlaws,Busan,3180,Qualifiers,Control
+39223,2,Houston Outlaws,Hollywood,3180,Qualifiers,Hybrid
+39223,3,Houston Outlaws,Circuit royal,3180,Qualifiers,Escort
+39247,1,Guangzhou Charge,Nepal,6300,Qualifiers,Control
+39247,2,Guangzhou Charge,Paraíso,6300,Qualifiers,Hybrid
+39247,3,Guangzhou Charge,Watchpoint: Gibraltar,6300,Qualifiers,Escort
+39247,4,Guangzhou Charge,New Queen Street,6300,Qualifiers,Push
+39247,5,Guangzhou Charge,Lijiang Tower,6300,Qualifiers,Control
+39248,1,Shanghai Dragons,Oasis,3960,Qualifiers,Control
+39248,2,Shanghai Dragons,Midtown,3960,Qualifiers,Hybrid
+39248,3,Shanghai Dragons,Circuit royal,3960,Qualifiers,Escort
+39224,1,Washington Justice,Oasis,6420,Qualifiers,Control
+39224,2,Washington Justice,Midtown,6420,Qualifiers,Hybrid
+39224,3,Washington Justice,Watchpoint: Gibraltar,6420,Qualifiers,Escort
+39224,4,Washington Justice,Colosseo,6420,Qualifiers,Push
+39224,5,Washington Justice,Ilios,6420,Qualifiers,Control
+39225,1,Houston Outlaws,Ilios,6060,Qualifiers,Control
+39225,2,Houston Outlaws,Midtown,6060,Qualifiers,Hybrid
+39225,3,Houston Outlaws,Circuit royal,6060,Qualifiers,Escort
+39225,4,Houston Outlaws,Colosseo,6060,Qualifiers,Push
+39225,5,Houston Outlaws,Busan,6060,Qualifiers,Control
+39226,1,Dallas Fuel,Nepal,4920,Qualifiers,Control
+39226,2,Dallas Fuel,Hollywood,4920,Qualifiers,Hybrid
+39226,3,Dallas Fuel,Dorado,4920,Qualifiers,Escort
+39226,4,Dallas Fuel,New Queen Street,4920,Qualifiers,Push
+39249,1,Guangzhou Charge,Lijiang Tower,4020,Qualifiers,Control
+39249,2,Guangzhou Charge,Hollywood,4020,Qualifiers,Hybrid
+39249,3,Guangzhou Charge,Junkertown,4020,Qualifiers,Escort
+39250,1,Shanghai Dragons,Busan,3240,Qualifiers,Control
+39250,2,Shanghai Dragons,Paraíso,3240,Qualifiers,Hybrid
+39250,3,Shanghai Dragons,Dorado,3240,Qualifiers,Escort
+39227,1,Los Angeles Gladiators,Lijiang Tower,3060,Qualifiers,Control
+39227,2,Los Angeles Gladiators,Hollywood,3060,Qualifiers,Hybrid
+39227,3,Los Angeles Gladiators,Dorado,3060,Qualifiers,Escort
+39228,1,New York Excelsior,Ilios,4140,Qualifiers,Control
+39228,2,New York Excelsior,Paraíso,4140,Qualifiers,Hybrid
+39228,3,New York Excelsior,Junkertown,4140,Qualifiers,Escort
+39228,4,New York Excelsior,Colosseo,4140,Qualifiers,Push
+39229,1,Dallas Fuel,Ilios,4980,Qualifiers,Control
+39229,2,Dallas Fuel,Paraíso,4980,Qualifiers,Hybrid
+39229,3,Dallas Fuel,Dorado,4980,Qualifiers,Escort
+39229,4,Dallas Fuel,New Queen Street,4980,Qualifiers,Push
+39251,1,Guangzhou Charge,Oasis,3960,Qualifiers,Control
+39251,2,Guangzhou Charge,Midtown,3960,Qualifiers,Hybrid
+39251,3,Guangzhou Charge,Watchpoint: Gibraltar,3960,Qualifiers,Escort
+39251,4,Guangzhou Charge,New Queen Street,3960,Qualifiers,Push
+39252,1,Los Angeles Valiant,Lijiang Tower,6240,Qualifiers,Control
+39252,2,Los Angeles Valiant,Paraíso,6240,Qualifiers,Hybrid
+39252,3,Los Angeles Valiant,Watchpoint: Gibraltar,6240,Qualifiers,Escort
+39252,4,Los Angeles Valiant,Colosseo,6240,Qualifiers,Push
+39252,5,Los Angeles Valiant,Oasis,6240,Qualifiers,Control
+39253,1,Seoul Dynasty,Oasis,6060,Qualifiers,Control
+39253,2,Seoul Dynasty,Hollywood,6060,Qualifiers,Hybrid
+39253,3,Seoul Dynasty,Circuit royal,6060,Qualifiers,Escort
+39253,4,Seoul Dynasty,Colosseo,6060,Qualifiers,Push
+39253,5,Seoul Dynasty,Busan,6060,Qualifiers,Control
+39230,1,Florida Mayhem,Lijiang Tower,2520,Qualifiers,Control
+39230,2,Florida Mayhem,Midtown,2520,Qualifiers,Hybrid
+39230,3,Florida Mayhem,Watchpoint: Gibraltar,2520,Qualifiers,Escort
+39231,1,Houston Outlaws,Busan,2760,Qualifiers,Control
+39231,2,Houston Outlaws,Paraíso,2760,Qualifiers,Hybrid
+39231,3,Houston Outlaws,Junkertown,2760,Qualifiers,Escort
+39232,1,Boston Uprising,Lijiang Tower,5220,Qualifiers,Control
+39232,2,Boston Uprising,Midtown,5220,Qualifiers,Hybrid
+39232,3,Boston Uprising,Dorado,5220,Qualifiers,Escort
+39232,4,Boston Uprising,Colosseo,5220,Qualifiers,Push
+39232,5,Boston Uprising,Nepal,5220,Qualifiers,Control
+39254,1,Philadelphia Fusion,Lijiang Tower,3780,Qualifiers,Control
+39254,2,Philadelphia Fusion,Paraíso,3780,Qualifiers,Hybrid
+39254,3,Philadelphia Fusion,Dorado,3780,Qualifiers,Escort
+39254,4,Philadelphia Fusion,Colosseo,3780,Qualifiers,Push
+39255,1,Shanghai Dragons,Lijiang Tower,4200,Qualifiers,Control
+39255,2,Shanghai Dragons,Midtown,4200,Qualifiers,Hybrid
+39255,3,Shanghai Dragons,Watchpoint: Gibraltar,4200,Qualifiers,Escort
+39233,1,London Spitfire,Lijiang Tower,5040,Qualifiers,Control
+39233,2,London Spitfire,Hollywood,5040,Qualifiers,Hybrid
+39233,3,London Spitfire,Circuit royal,5040,Qualifiers,Escort
+39233,4,London Spitfire,New Queen Street,5040,Qualifiers,Push
+39234,1,Florida Mayhem,Oasis,3780,Qualifiers,Control
+39234,2,Florida Mayhem,Paraíso,3780,Qualifiers,Hybrid
+39234,3,Florida Mayhem,Junkertown,3780,Qualifiers,Escort
+39261,1,Dallas Fuel,Ilios,5760,Tournament,Control
+39261,2,Dallas Fuel,Paraíso,5760,Tournament,Hybrid
+39261,3,Dallas Fuel,Circuit royal,5760,Tournament,Escort
+39261,4,Dallas Fuel,New Queen Street,5760,Tournament,Push
+39261,5,Dallas Fuel,Lijiang Tower,5760,Tournament,Control
+39262,1,London Spitfire,Ilios,4620,Tournament,Control
+39262,2,London Spitfire,Paraíso,4620,Tournament,Hybrid
+39262,3,London Spitfire,Dorado,4620,Tournament,Escort
+39262,4,London Spitfire,Colosseo,4620,Tournament,Push
+39263,1,San Francisco Shock,Lijiang Tower,4380,Tournament,Control
+39263,2,San Francisco Shock,Midtown,4380,Tournament,Hybrid
+39263,3,San Francisco Shock,Circuit royal,4380,Tournament,Escort
+39263,4,San Francisco Shock,New Queen Street,4380,Tournament,Push
+39264,1,Houston Outlaws,Busan,3420,Tournament,Control
+39264,2,Houston Outlaws,Hollywood,3420,Tournament,Hybrid
+39264,3,Houston Outlaws,Dorado,3420,Tournament,Escort
+39281,1,Shanghai Dragons,Oasis,4200,Tournament,Control
+39281,2,Shanghai Dragons,Midtown,4200,Tournament,Hybrid
+39281,3,Shanghai Dragons,Circuit royal,4200,Tournament,Escort
+39282,1,Seoul Dynasty,Nepal,5160,Tournament,Control
+39282,2,Seoul Dynasty,Hollywood,5160,Tournament,Hybrid
+39282,3,Seoul Dynasty,Circuit royal,5160,Tournament,Escort
+39282,4,Seoul Dynasty,New Queen Street,5160,Tournament,Push
+39282,5,Seoul Dynasty,Oasis,5160,Tournament,Control
+39265,1,Dallas Fuel,Lijiang Tower,4080,Tournament,Control
+39265,2,Dallas Fuel,Paraíso,4080,Tournament,Hybrid
+39265,3,Dallas Fuel,Circuit royal,4080,Tournament,Escort
+39265,4,Dallas Fuel,New Queen Street,4080,Tournament,Push
+39273,1,San Francisco Shock,Lijiang Tower,4440,Tournament,Control
+39273,2,San Francisco Shock,Hollywood,4440,Tournament,Hybrid
+39273,3,San Francisco Shock,Circuit royal,4440,Tournament,Escort
+39273,4,San Francisco Shock,New Queen Street,4440,Tournament,Push
+39274,1,Florida Mayhem,Lijiang Tower,3480,Tournament,Control
+39274,2,Florida Mayhem,Paraíso,3480,Tournament,Hybrid
+39274,3,Florida Mayhem,Circuit royal,3480,Tournament,Escort
+39271,1,Toronto Defiant,Lijiang Tower,4980,Tournament,Control
+39271,2,Toronto Defiant,Paraíso,4980,Tournament,Hybrid
+39271,3,Toronto Defiant,Circuit royal,4980,Tournament,Escort
+39271,4,Toronto Defiant,Colosseo,4980,Tournament,Push
+39286,1,Philadelphia Fusion,Lijiang Tower,3240,Tournament,Control
+39286,2,Philadelphia Fusion,Hollywood,3240,Tournament,Hybrid
+39286,3,Philadelphia Fusion,Circuit royal,3240,Tournament,Escort
+39272,1,Toronto Defiant,Busan,4500,Tournament,Control
+39272,2,Toronto Defiant,Hollywood,4500,Tournament,Hybrid
+39272,3,Toronto Defiant,Circuit royal,4500,Tournament,Escort
+39272,4,Toronto Defiant,New Queen Street,4500,Tournament,Push
+39269,1,Florida Mayhem,Oasis,6360,Tournament,Control
+39269,2,Florida Mayhem,Midtown,6360,Tournament,Hybrid
+39269,3,Florida Mayhem,Watchpoint: Gibraltar,6360,Tournament,Escort
+39269,4,Florida Mayhem,Colosseo,6360,Tournament,Push
+39269,5,Florida Mayhem,Ilios,6360,Tournament,Control
+39266,1,Dallas Fuel,Lijiang Tower,3660,Tournament,Control
+39266,2,Dallas Fuel,Hollywood,3660,Tournament,Hybrid
+39266,3,Dallas Fuel,Circuit royal,3660,Tournament,Escort
+39270,1,Toronto Defiant,Lijiang Tower,5400,Tournament,Control
+39270,2,Toronto Defiant,Paraíso,5400,Tournament,Hybrid
+39270,3,Toronto Defiant,Circuit royal,5400,Tournament,Escort
+39270,4,Toronto Defiant,Colosseo,5400,Tournament,Push
+39270,5,Toronto Defiant,Oasis,5400,Tournament,Control
+39285,1,Seoul Dynasty,Nepal,4920,Tournament,Control
+39285,2,Seoul Dynasty,Paraíso,4920,Tournament,Hybrid
+39285,3,Seoul Dynasty,Circuit royal,4920,Tournament,Escort
+39285,4,Seoul Dynasty,Colosseo,4920,Tournament,Push
+39284,1,Shanghai Dragons,Oasis,6780,Tournament,Control
+39284,2,Shanghai Dragons,Midtown,6780,Tournament,Hybrid
+39284,3,Shanghai Dragons,Dorado,6780,Tournament,Escort
+39284,4,Shanghai Dragons,Colosseo,6780,Tournament,Push
+39284,5,Shanghai Dragons,Busan,6780,Tournament,Control
+39284,6,Shanghai Dragons,Circuit royal,6780,Tournament,Escort
+39268,1,San Francisco Shock,Nepal,4320,Tournament,Control
+39268,2,San Francisco Shock,Hollywood,4320,Tournament,Hybrid
+39268,3,San Francisco Shock,Dorado,4320,Tournament,Escort
+39268,4,San Francisco Shock,Colosseo,4320,Tournament,Push
+39267,1,Dallas Fuel,Lijiang Tower,5040,Tournament,Control
+39267,2,Dallas Fuel,Hollywood,5040,Tournament,Hybrid
+39267,3,Dallas Fuel,Dorado,5040,Tournament,Escort
+39267,4,Dallas Fuel,Colosseo,5040,Tournament,Push
+39291,1,Boston Uprising,Oasis,4140,Qualifiers,Control
+39291,2,Boston Uprising,Eichenwalde,4140,Qualifiers,Hybrid
+39291,3,Boston Uprising,Route 66,4140,Qualifiers,Escort
+39291,4,Boston Uprising,Colosseo,4140,Qualifiers,Push
+39292,1,Dallas Fuel,Lijiang Tower,4140,Qualifiers,Control
+39292,2,Dallas Fuel,King's Row,4140,Qualifiers,Hybrid
+39292,3,Dallas Fuel,Route 66,4140,Qualifiers,Escort
+39292,4,Dallas Fuel,New Queen Street,4140,Qualifiers,Push
+39293,1,Atlanta Reign,Nepal,5220,Qualifiers,Control
+39293,2,Atlanta Reign,Paraíso,5220,Qualifiers,Hybrid
+39293,3,Atlanta Reign,Circuit royal,5220,Qualifiers,Escort
+39293,4,Atlanta Reign,Colosseo,5220,Qualifiers,Push
+39293,5,Atlanta Reign,Ilios,5220,Qualifiers,Control
+39330,1,Chengdu Hunters,Nepal,4440,Qualifiers,Control
+39330,2,Chengdu Hunters,Paraíso,4440,Qualifiers,Hybrid
+39330,3,Chengdu Hunters,Junkertown,4440,Qualifiers,Escort
+39330,4,Chengdu Hunters,Colosseo,4440,Qualifiers,Push
+39331,1,Seoul Dynasty,Lijiang Tower,3900,Qualifiers,Control
+39331,2,Seoul Dynasty,Eichenwalde,3900,Qualifiers,Hybrid
+39331,3,Seoul Dynasty,Route 66,3900,Qualifiers,Escort
+39294,1,London Spitfire,Ilios,4980,Qualifiers,Control
+39294,2,London Spitfire,Eichenwalde,4980,Qualifiers,Hybrid
+39294,3,London Spitfire,Dorado,4980,Qualifiers,Escort
+39294,4,London Spitfire,New Queen Street,4980,Qualifiers,Push
+39295,1,Los Angeles Gladiators,Lijiang Tower,4980,Qualifiers,Control
+39295,2,Los Angeles Gladiators,King's Row,4980,Qualifiers,Hybrid
+39295,3,Los Angeles Gladiators,Route 66,4980,Qualifiers,Escort
+39295,4,Los Angeles Gladiators,Colosseo,4980,Qualifiers,Push
+39296,1,New York Excelsior,Oasis,5280,Qualifiers,Control
+39296,2,New York Excelsior,King's Row,5280,Qualifiers,Hybrid
+39296,3,New York Excelsior,Dorado,5280,Qualifiers,Escort
+39296,4,New York Excelsior,Colosseo,5280,Qualifiers,Push
+39296,5,New York Excelsior,Nepal,5280,Qualifiers,Control
+39332,1,Seoul Dynasty,Ilios,3240,Qualifiers,Control
+39332,2,Seoul Dynasty,Paraíso,3240,Qualifiers,Hybrid
+39332,3,Seoul Dynasty,Junkertown,3240,Qualifiers,Escort
+39333,1,Chengdu Hunters,Lijiang Tower,6600,Qualifiers,Control
+39333,2,Chengdu Hunters,King's Row,6600,Qualifiers,Hybrid
+39333,3,Chengdu Hunters,Circuit royal,6600,Qualifiers,Escort
+39333,4,Chengdu Hunters,New Queen Street,6600,Qualifiers,Push
+39333,5,Chengdu Hunters,Oasis,6600,Qualifiers,Control
+39334,1,Los Angeles Valiant,Oasis,5640,Qualifiers,Control
+39334,2,Los Angeles Valiant,Paraíso,5640,Qualifiers,Hybrid
+39334,3,Los Angeles Valiant,Junkertown,5640,Qualifiers,Escort
+39334,4,Los Angeles Valiant,Colosseo,5640,Qualifiers,Push
+39334,5,Los Angeles Valiant,Nepal,5640,Qualifiers,Control
+39297,1,London Spitfire,Busan,4620,Qualifiers,Control
+39297,2,London Spitfire,Paraíso,4620,Qualifiers,Hybrid
+39297,3,London Spitfire,Junkertown,4620,Qualifiers,Escort
+39297,4,London Spitfire,Colosseo,4620,Qualifiers,Push
+39298,1,Washington Justice,Oasis,5460,Qualifiers,Control
+39298,2,Washington Justice,Eichenwalde,5460,Qualifiers,Hybrid
+39298,3,Washington Justice,Dorado,5460,Qualifiers,Escort
+39298,4,Washington Justice,New Queen Street,5460,Qualifiers,Push
+39298,5,Washington Justice,Nepal,5460,Qualifiers,Control
+39299,1,Boston Uprising,Nepal,3900,Qualifiers,Control
+39299,2,Boston Uprising,Paraíso,3900,Qualifiers,Hybrid
+39299,3,Boston Uprising,Junkertown,3900,Qualifiers,Escort
+39335,1,Guangzhou Charge,Nepal,5820,Qualifiers,Control
+39335,2,Guangzhou Charge,King's Row,5820,Qualifiers,Hybrid
+39335,3,Guangzhou Charge,Route 66,5820,Qualifiers,Escort
+39335,4,Guangzhou Charge,New Queen Street,5820,Qualifiers,Push
+39335,5,Guangzhou Charge,Ilios,5820,Qualifiers,Control
+39336,1,Philadelphia Fusion,Nepal,4980,Qualifiers,Control
+39336,2,Philadelphia Fusion,King's Row,4980,Qualifiers,Hybrid
+39336,3,Philadelphia Fusion,Dorado,4980,Qualifiers,Escort
+39336,4,Philadelphia Fusion,Colosseo,4980,Qualifiers,Push
+39300,1,Atlanta Reign,Ilios,3540,Qualifiers,Control
+39300,2,Atlanta Reign,King's Row,3540,Qualifiers,Hybrid
+39300,3,Atlanta Reign,Circuit royal,3540,Qualifiers,Escort
+39301,1,Dallas Fuel,Nepal,2640,Qualifiers,Control
+39301,2,Dallas Fuel,Paraíso,2640,Qualifiers,Hybrid
+39301,3,Dallas Fuel,Circuit royal,2640,Qualifiers,Escort
+39302,1,Houston Outlaws,Busan,4560,Qualifiers,Control
+39302,2,Houston Outlaws,King's Row,4560,Qualifiers,Hybrid
+39302,3,Houston Outlaws,Route 66,4560,Qualifiers,Escort
+39302,4,Houston Outlaws,New Queen Street,4560,Qualifiers,Push
+39303,1,Los Angeles Gladiators,Nepal,2640,Qualifiers,Control
+39303,2,Los Angeles Gladiators,Eichenwalde,2640,Qualifiers,Hybrid
+39303,3,Los Angeles Gladiators,Dorado,2640,Qualifiers,Escort
+39337,1,Seoul Dynasty,Busan,4440,Qualifiers,Control
+39337,2,Seoul Dynasty,King's Row,4440,Qualifiers,Hybrid
+39337,3,Seoul Dynasty,Dorado,4440,Qualifiers,Escort
+39337,4,Seoul Dynasty,New Queen Street,4440,Qualifiers,Push
+39338,1,Philadelphia Fusion,Busan,4320,Qualifiers,Control
+39338,2,Philadelphia Fusion,Eichenwalde,4320,Qualifiers,Hybrid
+39338,3,Philadelphia Fusion,Circuit royal,4320,Qualifiers,Escort
+39338,4,Philadelphia Fusion,New Queen Street,4320,Qualifiers,Push
+39304,1,Los Angeles Gladiators,Oasis,3840,Qualifiers,Control
+39304,2,Los Angeles Gladiators,King's Row,3840,Qualifiers,Hybrid
+39304,3,Los Angeles Gladiators,Circuit royal,3840,Qualifiers,Escort
+39305,1,Dallas Fuel,Ilios,3780,Qualifiers,Control
+39305,2,Dallas Fuel,King's Row,3780,Qualifiers,Hybrid
+39305,3,Dallas Fuel,Junkertown,3780,Qualifiers,Escort
+39306,1,Toronto Defiant,Busan,4800,Qualifiers,Control
+39306,2,Toronto Defiant,Paraíso,4800,Qualifiers,Hybrid
+39306,3,Toronto Defiant,Junkertown,4800,Qualifiers,Escort
+39306,4,Toronto Defiant,New Queen Street,4800,Qualifiers,Push
+39339,1,Shanghai Dragons,Lijiang Tower,5100,Qualifiers,Control
+39339,2,Shanghai Dragons,Paraíso,5100,Qualifiers,Hybrid
+39339,3,Shanghai Dragons,Route 66,5100,Qualifiers,Escort
+39339,4,Shanghai Dragons,New Queen Street,5100,Qualifiers,Push
+39339,5,Shanghai Dragons,Oasis,5100,Qualifiers,Control
+39340,1,Los Angeles Valiant,Nepal,6660,Qualifiers,Control
+39340,2,Los Angeles Valiant,Eichenwalde,6660,Qualifiers,Hybrid
+39340,3,Los Angeles Valiant,Dorado,6660,Qualifiers,Escort
+39340,4,Los Angeles Valiant,Colosseo,6660,Qualifiers,Push
+39340,5,Los Angeles Valiant,Ilios,6660,Qualifiers,Control
+39341,1,Seoul Dynasty,Oasis,4560,Qualifiers,Control
+39341,2,Seoul Dynasty,Paraíso,4560,Qualifiers,Hybrid
+39341,3,Seoul Dynasty,Circuit royal,4560,Qualifiers,Escort
+39307,1,Dallas Fuel,Lijiang Tower,3780,Qualifiers,Control
+39307,2,Dallas Fuel,Eichenwalde,3780,Qualifiers,Hybrid
+39307,3,Dallas Fuel,Dorado,3780,Qualifiers,Escort
+39308,1,Washington Justice,Nepal,4500,Qualifiers,Control
+39308,2,Washington Justice,Paraíso,4500,Qualifiers,Hybrid
+39308,3,Washington Justice,Junkertown,4500,Qualifiers,Escort
+39308,4,Washington Justice,Colosseo,4500,Qualifiers,Push
+39309,1,San Francisco Shock,Lijiang Tower,6360,Qualifiers,Control
+39309,2,San Francisco Shock,Paraíso,6360,Qualifiers,Hybrid
+39309,3,San Francisco Shock,Junkertown,6360,Qualifiers,Escort
+39309,4,San Francisco Shock,Colosseo,6360,Qualifiers,Push
+39309,5,San Francisco Shock,Oasis,6360,Qualifiers,Control
+39342,1,Guangzhou Charge,Lijiang Tower,6000,Qualifiers,Control
+39342,2,Guangzhou Charge,Eichenwalde,6000,Qualifiers,Hybrid
+39342,3,Guangzhou Charge,Dorado,6000,Qualifiers,Escort
+39342,4,Guangzhou Charge,Colosseo,6000,Qualifiers,Push
+39342,5,Guangzhou Charge,Oasis,6000,Qualifiers,Control
+39343,1,Los Angeles Valiant,Ilios,5820,Qualifiers,Control
+39343,2,Los Angeles Valiant,King's Row,5820,Qualifiers,Hybrid
+39343,3,Los Angeles Valiant,Circuit royal,5820,Qualifiers,Escort
+39343,4,Los Angeles Valiant,New Queen Street,5820,Qualifiers,Push
+39343,5,Los Angeles Valiant,Busan,5820,Qualifiers,Control
+39310,1,Los Angeles Gladiators,Busan,6420,Qualifiers,Control
+39310,2,Los Angeles Gladiators,Eichenwalde,6420,Qualifiers,Hybrid
+39310,3,Los Angeles Gladiators,Route 66,6420,Qualifiers,Escort
+39310,4,Los Angeles Gladiators,New Queen Street,6420,Qualifiers,Push
+39310,5,Los Angeles Gladiators,Lijiang Tower,6420,Qualifiers,Control
+39311,1,Atlanta Reign,Oasis,2940,Qualifiers,Control
+39311,2,Atlanta Reign,Eichenwalde,2940,Qualifiers,Hybrid
+39311,3,Atlanta Reign,Route 66,2940,Qualifiers,Escort
+39312,1,Vancouver Titans,Lijiang Tower,4620,Qualifiers,Control
+39312,2,Vancouver Titans,Eichenwalde,4620,Qualifiers,Hybrid
+39312,3,Vancouver Titans,Route 66,4620,Qualifiers,Escort
+39312,4,Vancouver Titans,New Queen Street,4620,Qualifiers,Push
+39344,1,Hangzhou Spark,Oasis,5760,Qualifiers,Control
+39344,2,Hangzhou Spark,Eichenwalde,5760,Qualifiers,Hybrid
+39344,3,Hangzhou Spark,Circuit royal,5760,Qualifiers,Escort
+39344,4,Hangzhou Spark,Colosseo,5760,Qualifiers,Push
+39344,5,Hangzhou Spark,Nepal,5760,Qualifiers,Control
+39345,1,Guangzhou Charge,Ilios,4680,Qualifiers,Control
+39345,2,Guangzhou Charge,Paraíso,4680,Qualifiers,Hybrid
+39345,3,Guangzhou Charge,Junkertown,4680,Qualifiers,Escort
+39345,4,Guangzhou Charge,Colosseo,4680,Qualifiers,Push
+39315,1,Houston Outlaws,Lijiang Tower,3960,Qualifiers,Control
+39315,2,Houston Outlaws,Paraíso,3960,Qualifiers,Hybrid
+39315,3,Houston Outlaws,Junkertown,3960,Qualifiers,Escort
+39314,1,Washington Justice,Busan,6120,Qualifiers,Control
+39314,2,Washington Justice,King's Row,6120,Qualifiers,Hybrid
+39314,3,Washington Justice,Circuit royal,6120,Qualifiers,Escort
+39314,4,Washington Justice,New Queen Street,6120,Qualifiers,Push
+39314,5,Washington Justice,Lijiang Tower,6120,Qualifiers,Control
+39313,1,Florida Mayhem,Busan,5220,Qualifiers,Control
+39313,2,Florida Mayhem,Paraíso,5220,Qualifiers,Hybrid
+39313,3,Florida Mayhem,Circuit royal,5220,Qualifiers,Escort
+39313,4,Florida Mayhem,Colosseo,5220,Qualifiers,Push
+39313,5,Florida Mayhem,Lijiang Tower,5220,Qualifiers,Control
+39346,1,Guangzhou Charge,Busan,3660,Qualifiers,Control
+39346,2,Guangzhou Charge,Eichenwalde,3660,Qualifiers,Hybrid
+39346,3,Guangzhou Charge,Junkertown,3660,Qualifiers,Escort
+39347,1,Shanghai Dragons,Busan,2880,Qualifiers,Control
+39347,2,Shanghai Dragons,King's Row,2880,Qualifiers,Hybrid
+39347,3,Shanghai Dragons,Dorado,2880,Qualifiers,Escort
+39348,1,Philadelphia Fusion,Ilios,3420,Qualifiers,Control
+39348,2,Philadelphia Fusion,Paraíso,3420,Qualifiers,Hybrid
+39348,3,Philadelphia Fusion,Route 66,3420,Qualifiers,Escort
+39348,4,Philadelphia Fusion,New Queen Street,3420,Qualifiers,Push
+39316,1,Atlanta Reign,Oasis,6060,Qualifiers,Control
+39316,2,Atlanta Reign,King's Row,6060,Qualifiers,Hybrid
+39316,3,Atlanta Reign,Dorado,6060,Qualifiers,Escort
+39316,4,Atlanta Reign,New Queen Street,6060,Qualifiers,Push
+39316,5,Atlanta Reign,Nepal,6060,Qualifiers,Control
+39317,1,Los Angeles Gladiators,Ilios,4800,Qualifiers,Control
+39317,2,Los Angeles Gladiators,Paraíso,4800,Qualifiers,Hybrid
+39317,3,Los Angeles Gladiators,Junkertown,4800,Qualifiers,Escort
+39317,4,Los Angeles Gladiators,Colosseo,4800,Qualifiers,Push
+39318,1,Houston Outlaws,Oasis,5280,Qualifiers,Control
+39318,2,Houston Outlaws,Paraíso,5280,Qualifiers,Hybrid
+39318,3,Houston Outlaws,Circuit royal,5280,Qualifiers,Escort
+39318,4,Houston Outlaws,New Queen Street,5280,Qualifiers,Push
+39349,1,Shanghai Dragons,Oasis,3480,Qualifiers,Control
+39349,2,Shanghai Dragons,Eichenwalde,3480,Qualifiers,Hybrid
+39349,3,Shanghai Dragons,Junkertown,3480,Qualifiers,Escort
+39350,1,Seoul Dynasty,Nepal,5880,Qualifiers,Control
+39350,2,Seoul Dynasty,King's Row,5880,Qualifiers,Hybrid
+39350,3,Seoul Dynasty,Route 66,5880,Qualifiers,Escort
+39350,4,Seoul Dynasty,New Queen Street,5880,Qualifiers,Push
+39350,5,Seoul Dynasty,Ilios,5880,Qualifiers,Control
+39319,1,Vancouver Titans,Oasis,4680,Qualifiers,Control
+39319,2,Vancouver Titans,King's Row,4680,Qualifiers,Hybrid
+39319,3,Vancouver Titans,Dorado,4680,Qualifiers,Escort
+39319,4,Vancouver Titans,New Queen Street,4680,Qualifiers,Push
+39319,5,Vancouver Titans,Nepal,4680,Qualifiers,Control
+39320,1,Dallas Fuel,Busan,4500,Qualifiers,Control
+39320,2,Dallas Fuel,Eichenwalde,4500,Qualifiers,Hybrid
+39320,3,Dallas Fuel,Junkertown,4500,Qualifiers,Escort
+39320,4,Dallas Fuel,New Queen Street,4500,Qualifiers,Push
+39321,1,Los Angeles Gladiators,Ilios,3780,Qualifiers,Control
+39321,2,Los Angeles Gladiators,Paraíso,3780,Qualifiers,Hybrid
+39321,3,Los Angeles Gladiators,Dorado,3780,Qualifiers,Escort
+39321,4,Los Angeles Gladiators,Colosseo,3780,Qualifiers,Push
+39322,1,London Spitfire,Busan,3900,Qualifiers,Control
+39322,2,London Spitfire,Paraíso,3900,Qualifiers,Hybrid
+39322,3,London Spitfire,Route 66,3900,Qualifiers,Escort
+39323,1,San Francisco Shock,Ilios,3120,Qualifiers,Control
+39323,2,San Francisco Shock,Eichenwalde,3120,Qualifiers,Hybrid
+39323,3,San Francisco Shock,Route 66,3120,Qualifiers,Escort
+39324,1,Florida Mayhem,Ilios,3120,Qualifiers,Control
+39324,2,Florida Mayhem,Eichenwalde,3120,Qualifiers,Hybrid
+39324,3,Florida Mayhem,Junkertown,3120,Qualifiers,Escort
+39325,1,San Francisco Shock,Nepal,5820,Qualifiers,Control
+39325,2,San Francisco Shock,King's Row,5820,Qualifiers,Hybrid
+39325,3,San Francisco Shock,Circuit royal,5820,Qualifiers,Escort
+39325,4,San Francisco Shock,Colosseo,5820,Qualifiers,Push
+39325,5,San Francisco Shock,Ilios,5820,Qualifiers,Control
+39326,1,Boston Uprising,Lijiang Tower,4260,Qualifiers,Control
+39326,2,Boston Uprising,Eichenwalde,4260,Qualifiers,Hybrid
+39326,3,Boston Uprising,Circuit royal,4260,Qualifiers,Escort
+39326,4,Boston Uprising,New Queen Street,4260,Qualifiers,Push
+39327,1,Florida Mayhem,Nepal,4860,Qualifiers,Control
+39327,2,Florida Mayhem,Eichenwalde,4860,Qualifiers,Hybrid
+39327,3,Florida Mayhem,Dorado,4860,Qualifiers,Escort
+39327,4,Florida Mayhem,New Queen Street,4860,Qualifiers,Push
+39328,1,Boston Uprising,Busan,3960,Qualifiers,Control
+39328,2,Boston Uprising,King's Row,3960,Qualifiers,Hybrid
+39328,3,Boston Uprising,Junkertown,3960,Qualifiers,Escort
+39328,4,Boston Uprising,New Queen Street,3960,Qualifiers,Push
+39329,1,Toronto Defiant,Ilios,4260,Qualifiers,Control
+39329,2,Toronto Defiant,King's Row,4260,Qualifiers,Hybrid
+39329,3,Toronto Defiant,Dorado,4260,Qualifiers,Escort
+39329,4,Toronto Defiant,Colosseo,4260,Qualifiers,Push
